@@ -41,7 +41,7 @@ class User extends \TCG\Voyager\Models\User
     public function demande(){
 
         return $this->hasMany(\App\Demande::class);
-        //chaque utilisateur a une ou plusieurs demandes
+        //Un utilisateur peux avoir une ou plusieurs demandes
 
 }
 

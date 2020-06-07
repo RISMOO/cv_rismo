@@ -67,7 +67,7 @@ section {
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   color: #ADAFAE;
@@ -5010,6 +5010,13 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.87);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border:none;
+
 }
 
 .card-title {
@@ -5034,9 +5041,14 @@ input[type=button].btn-block {
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+
+    padding: 1.25rem;
+    background: url(https://www.fondation-mines-telecom.org/wp-content/uploads/2017/05/Incubateur-IMT-Atlantique.png) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -10941,7 +10953,7 @@ a.text-dark:focus {
 }
 
 .navbar.bg-dark {
-  background-color: #000000 !important;
+  background-color: #724c4cb2 !important;
   border: 1px solid #282828;
 }
 

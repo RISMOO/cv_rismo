@@ -24,7 +24,7 @@ class RessourcesController extends Controller
 
      ->paginate(6);
 
-     $catalogue="catalogue/Ressources";
+     $catalogue="Catalogue/Ressources";
 
 
     return view('catalogue.Ressource')->with(['ressources'=> $ressources,'catalogue'=>$catalogue]);
@@ -41,9 +41,13 @@ class RessourcesController extends Controller
 
     public function show($slug){
 
+       
+
         $ressources= Ressource::whereSlug($slug)->first();//une seul instance
 
-        
+        $ressources->nb_visite++;
+
+
           $ressources->save();
 
         return view('catalogue.Show')->with('ressources',$ressources);

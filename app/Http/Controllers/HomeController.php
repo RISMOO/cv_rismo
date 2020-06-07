@@ -35,6 +35,8 @@ class HomeController extends Controller
         $user_id=auth()->user()->id;
         $user=User::find($user_id);
 
+      //  ->orderBy('created_at', 'desc');
+
 
 
         return view ('home')->with(['demande'=>$user->demande]);

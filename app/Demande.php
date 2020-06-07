@@ -25,11 +25,6 @@ public function ressource(){
 
 
 
-public function operatingSystem(){
-
-    return $this->belongsTo(\App\OperatingSystem::class);
-}
-
 
 
 

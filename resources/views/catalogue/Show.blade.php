@@ -10,7 +10,7 @@
    </div>
   </div>
 <div class="card mb-3">
-    <h3 class="card-header">{{$ressources->title}}</h3>
+
 
 <img class="img-thumbnail" src="{{asset('storage/'.$ressources->image)}}"alt="{{$ressources->title}}">
   <div class="card-body">
@@ -32,6 +32,7 @@
       @endif
     </div>
   <div class="card-footer text-muted">
+    <h6><a href="/demande/create" class="border-secondary btn btn-outline-primary"style="margin-bottom:15px">Faire une demande</a></h6>
 
 
   </div>

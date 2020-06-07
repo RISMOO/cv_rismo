@@ -15,16 +15,16 @@
           <a class="nav-link" href="/contact">Demande de Labs<span class="sr-only">(current)</span></a>
         </li>-->
 
-<li class="nav-item dropdown">
+<li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-    <div class="dropdown-menu" style="Menu">
+    <div class="dropdown-menu border-secondary" style="Menu">
         <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"><br><hr>
 
       <a class="dropdown-item" href="/catalogue">Catologue Ressources</a>
       <a class="dropdown-item" href="/demande/create">Demande de labs</a>
 
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="/home">Home</a>
+      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home"></i> Home</a> </a>
     </div>
 
     </div>
@@ -43,14 +43,14 @@
 
                    <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->name }}</a>
-                    <div class="dropdown-menu  dropdown-menu-right " style="Menu">
+                    <div class="dropdown-menu border-secondary  dropdown-menu-right " style="Menu">
                         <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"><br><hr>
 
-                      <a class="dropdown-item" href="/home">Tableau de bord</a>
-                      <a class="dropdown-item" href="/admin">Admin</a>
+                      <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
+                      <a class="dropdown-item" href="/admin"><i class='fa fa-cogs'>&nbsp;</i>Admin</a>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
                        Se deconnecter
                    </a>
 

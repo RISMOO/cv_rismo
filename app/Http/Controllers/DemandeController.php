@@ -7,6 +7,35 @@ use App\Demande;
 use App\Ressource;
 use Illuminate\Http\Request;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DemandeController extends Controller
 {
 
@@ -79,7 +108,7 @@ class DemandeController extends Controller
 
             $demande=new Demande;
 
-            $demande->ressource_id=$request->input('ressource');
+            $demande->ressource_id=$request->input('ressources');
             $demande->Labs=trim($request->input('Labs'));
 
 

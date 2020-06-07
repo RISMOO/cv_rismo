@@ -9,43 +9,6 @@
     <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"></a><hr>
 
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h3 class="text-primary">Demande de labs </h3>
 <hr>
 
@@ -63,7 +26,7 @@
 
 <p class="text-primary">{{Form::label('Ressources disponibles', 'Ressources disponibles')}}</p>
 
-<p>{{Form::select('ressource',$ressources,'0',['class'=>'custom-select font-weight-bold ','placeholder'=> 'Ressources'])}}</p>
+<p>{{Form::select('ressources',$ressources,'0',['class'=>'custom-select font-weight-bold ','placeholder'=> 'Ressources'])}}</p>
 
 </div>
 <div class="form-group">
