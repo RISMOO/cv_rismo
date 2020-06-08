@@ -47,7 +47,7 @@
 <h5>
 
 
-{!! Form::submit("Envoyer ",['class'=>'border-secondary btn btn-outline-primary'])!!}
+{!! Form::submit("Envoyer ",['class'=>'border-secondary btn btn-outline-primary btn-block'])!!}
 </h5>
 
 {!! Form::close()!!}

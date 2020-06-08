@@ -14,7 +14,17 @@ class CreateRessourcesTable extends Migration
     public function up()
     {
         Schema::create('ressources', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('title');
+            $table->string('excerpt');
+            $table->longText('body');
+            $table->string('image');
+            $table->string('exemple');
+            $table->string('slug');
+            $table->string('lien');
+            $table->string('lien2');
+            $table->string('lien3');
+            $table->integer('nb_visite');
             $table->timestamps();
         });
     }

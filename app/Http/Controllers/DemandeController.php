@@ -6,39 +6,10 @@ use App\Demande;
 
 use App\Ressource;
 use Illuminate\Http\Request;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+use Illuminate\Support\Carbon;
 
 class DemandeController extends Controller
 {
-
 
     public function __construct()// tous nos utilisateurs qui feront une demande doivent etre identifié
     {
@@ -96,27 +67,24 @@ class DemandeController extends Controller
     public function store(Request $request)/*pour notre mise a jour on copie la fonctioN
     store et on la met dans la fonction update */
     {
-       /* if ((!empty($request->input('ressource')) && empty($request->input('operatingSystem'))) || (!empty($request->input('operatingSystem'))) && empty($request->input('ressource'))){*/
+
+
             $this->validate($request,[
 
                 'Labs'=>'required|alpha|between:3,20',
-                'Date_de_debut'=>'required',
-                'Date_de_fin'=>'required'
+                'Date_de_debut'=>'required|date',
+                'Date_de_fin'=>'required|date|after:Date_de_debut'
 
             ]);
 
 
             $demande=new Demande;
-
-            $demande->ressource_id=$request->input('ressources');
             $demande->Labs=trim($request->input('Labs'));
-
-
+            $demande->ressource_id=$request->input('ressources');
             $demande->Date_de_debut=$request->input('Date_de_debut');
             $demande->Date_de_fin=$request->input('Date_de_fin');
             $demande->user_name=auth()->user()->name;
             $demande->user_email=auth()->user()->email;
-
 
 
             $demande->user_id=auth()->user()->id;// grace a la fonction auth on recupere l'id et l'utilisateur
@@ -124,11 +92,9 @@ class DemandeController extends Controller
 
             return redirect('/home') ->with('success', "votre message  a été envoyé !");
 /*
-        }else{
 
-         return redirect('/home') ->with('error', "vous ne pouuvez pas choisir 2 ressources!");
 
-    }
+
 */
  } /**
      * Display the specified resource.
@@ -187,40 +153,28 @@ class DemandeController extends Controller
      */
     public function update(Request $request, $id)
     {
-/*
-        if ((!empty($request->input('ressource')) && empty($request->input('operatingSystem'))) || (!empty($request->input('operatingSystem'))) && empty($request->input('ressource')))
-        || ((!empty($request->input('Labs')) && empty($request->input('operatingSystem'))) || (!empty($request->input('operatingSystem'))) && empty($request->input('ressource')))
-        || { {
 
-*/
         $this->validate($request,[
             'Labs'=>'required|alpha|between:3,20',
-            'Date_de_debut'=>'required',
-            'Date_de_fin'=>'required'
-
-
+            'Date_de_debut'=>'required|date',
+            'Date_de_fin'=>'required|apres:Date_de_debut'
 
         ]);
-
 
         $demande=Demande::find($id);//on va chercher la demande que l'on veut modifier
         $demande->ressource_id=$request->input('ressource');
         $demande->Labs=trim($request->input('Labs'));
         $demande->Date_de_debut=$request->input('Date_de_debut');
         $demande->Date_de_fin=$request->input('Date_de_fin');
-
-
         $demande->save();
 
         return redirect('/home')
         ->with  ('success', "Votre demande a bien été modifié !");
-/*
-    }else{
 
-        return redirect('/demande/create') ->with("alert alert-danger","vous devez choisur qu'un seul champ!");
 
-   }
-   */
+
+
+
     }
 
     /**

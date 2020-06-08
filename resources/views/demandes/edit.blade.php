@@ -40,13 +40,13 @@
 <hr>
 <h5>
     {{Form::hidden('_method','PUT')}}<!--mettre a jour avec la methode PUT-->
-    {{Form::submit("Valider votre demande ",['class'=>'border-secondary btn btn-outline-success'])}}
+    {{Form::submit("Valider votre demande ",['class'=>'border-secondary btn btn-outline-success btn-block'])}}
 </h5>
 {!! Form::close()!!}
 <h5><hr>
 {!! Form::open(['action'=>['DemandeController@destroy',$demande->id],'method'=>'POST']) !!}
 {{ Form::hidden('_method','DELETE')}}
-{{ Form::submit('Supprimer votre demande',['class'=>'border-secondary btn btn-outline-danger'] )}}
+{{ Form::submit('Supprimer votre demande',['class'=>'border-secondary btn btn-outline-danger btn-block'] )}}
 {!! Form::close() !!}
 </h5>
 

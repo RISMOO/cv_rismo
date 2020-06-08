@@ -35,12 +35,12 @@
 
                           </div>
                             <div class="card text-center ">
-                                <h5><a href="/demande/{{$demande->id}}/edit" class="text border-secondary btn btn-outline-primary"style="margin-bottom:15px">Modifier votre demande</a></h5>
+                                <h5><a href="/demande/{{$demande->id}}/edit" class="text border-secondary btn btn-outline-primary btn-block"style="margin-bottom:15px">Modifier votre demande</a></h5>
 
 
                               <h5> {!! Form::open(['action'=>['DemandeController@destroy',$demande->id],'method'=>'POST']) !!}
                                {{ Form::hidden('_method','DELETE')}}
-                              {{ Form::submit('Supprimer',['class'=>'border-secondary btn btn-outline-danger'] )}}
+                              {{ Form::submit('Supprimer',['class'=>'border-secondary btn btn-outline-danger btn-block'] )}}
                               {!! Form::close() !!}
                               </h5>
                             </div>

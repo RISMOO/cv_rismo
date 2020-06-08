@@ -47,7 +47,7 @@
                         <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"><br><hr>
 
                       <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
-                      <a class="dropdown-item" href="/admin"><i class='fa fa-cogs'>&nbsp;</i>Admin</a>
+                      <a class="dropdown-item" href="/admin"></i>Admin</a>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>

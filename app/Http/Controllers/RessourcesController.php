@@ -41,7 +41,7 @@ class RessourcesController extends Controller
 
     public function show($slug){
 
-       
+
 
         $ressources= Ressource::whereSlug($slug)->first();//une seul instance
 

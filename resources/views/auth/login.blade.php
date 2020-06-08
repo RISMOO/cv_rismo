@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-7 mt-5">
             <div class="card border-secondary">
-                <div class="card-header center pt-5 pb-5 font-weight-bold text-dark">{{ __('Login') }}
+                <div class="card-header center pt-3 pb-4 font-weight-bold text-dark">{{ __('Login') }}
 
 
                 </div>
@@ -52,18 +52,17 @@
                             <div class="col-md-9 offset-md-4 ml-6">
 
                                     <a href="{{ route('register') }}">S'enregistrer </a>
-                                    </div><br>
+                                    </div>
                                     <div class="col-md-9 offset-md-4">
-                                <button type="submit" class="border-secondary btn btn-outline-success">
-                                    {{ __('Login') }}
-                                </button>
+                                <button type="submit" class="btn btn-outline-primary border-light"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+                                </button><br>
 
 
                                 @if (Route::has('password.request'))
-                                    <a href="{{ route('password.request') }}">
+                                 <small>   <a href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-
+                                 </small>
 
                                 @endif
 

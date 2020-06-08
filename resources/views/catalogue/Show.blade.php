@@ -32,7 +32,7 @@
       @endif
     </div>
   <div class="card-footer text-muted">
-    <h6><a href="/demande/create" class="border-secondary btn btn-outline-primary"style="margin-bottom:15px">Faire une demande</a></h6>
+    <h6><a href="/demande/create" class="border-secondary btn btn-outline-primary btn-block"style="margin-bottom:15px">Faire une demande</a></h6>
 
 
   </div>
