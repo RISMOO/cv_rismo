@@ -2,44 +2,86 @@
 @section('content')
 
 
-<div class="container mt-5">
-
-    <div class="d-flex justify-content-between">
-    <h6 class="text-center"><a href="/demande/create" class="border-secondary btn btn-outline-success btn-lg"style="margin-bottom:15px">Faire une demande</a></h6>
-    <h6 class="text-center"><a href="/catalogue/" class="border-secondary btn btn-outline-primary btn-lg"style="margin-bottom:15px">VOIR LE CATALOGUE</a></h6>
+@if(count($demande) == 0)
+<div class="container">
+@endif
+    <div class="row">
+        <div class="d-flex justify-content-between col-12">
+          <h6 class="text-black" style="font-size:24px"><a href="/demande/create">
+            <i class="fa fa-angle-right" style="font-size:34px"></i> Faire une demande</a></h6>
+              <h6 class="text-black" style="font-size:24px"><a href="/catalogue/">Voir le catalogue <i class="fa fa-angle-left" style="font-size:34px"></i></a></h6>
+          </div>
+        </div>
+            <br>
+     <div class="text-center">
+        @if(count($demande) == 0)
+     <p><a href="/Demo" class="is-active sf-depth-1" target ><i class="fa fa-exclamation-circle fa-2x" aria-hidden="true"></i> Comment faire une demande</a></p>
+        @endif
     </div>
-    <div class="card border-secondary text-center mb-3" style="max-width:auto;">
-    <div class="d-flex justify-content-between">
- <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"></a><br>
-</div>
-     <h4 class="text-capitalize text-center mb-2">Liste<br> de vos<br>demandes en cours</h4><hr>
+       <br>
+    <div class="card-body">
+     @if(!count($demande) == 0)
+      <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"></a>
+       <h3 class="text-primary text-center">Liste <br>de vos demandes en cours </h3>
 
+@endif
+ @if(count($demande)>=1)
+     <h6 class="text-center mb-2">Vous avez &nbsp;<strong class="text-success font-size-2rem">{{count($demande)}}</strong>&nbsp;&nbsp;demande(s)&nbsp;en cours </h6>
+@endif
+<hr>
    @if(count($demande) >= 1 )
    @foreach ($demande as $demande)
-   <div class="d-flex justify-content-between">
-   <div class="container">
-       <div class="row">
-           <div class="col-sm">
-     <div class="card border-secondary text-center mb-3" style="width:auto">
-       <h6 class="text-white mt-4">Nom du Lab</h6> <h5 class="text-success">{{$demande->Labs}}</h5>
-       <h6 class="text-white mt-2 mb-2 ">Nom de la Ressource</h6> <h5 class="text-success">{{$demande->Ressource['title']}}</h5>
-       <h6 class="text-white mt-4">Demande le</h6> <h5 class="text-success mb-2">{{$demande->created_at}}</h5><hr>
-       <p><a href="/demande/{{$demande->id}}" class="text-primary">Voir la demande....</a></p>
-     </div>
-           </div>
-       </div>
-     </div>
-   </div>
-   @endforeach
-     <hr>
+  <div class=container>
+    <div class="card-body mb-4 mt-2">
+    <div class="row vdivide">
 
+        <div class="col-sm-4 text-center"><h5 class="text-light">Nom du lab</h5><hr>
+            <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->Labs}}<span></h6>
+        </div>
+
+        <div class="col-sm-4 text-center"><h5 class="text-light">Ressource</h5><hr>
+         <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
+
+        </div>
+        <div class="col-sm-4 text-center"><h5 class="text-light">Demande le</h5><hr>
+            <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->created_at}}<span></h6>
+
+           </div>
+
+    </div>
+    </div>
+
+
+
+        <h6 class="text-center"><a href="{{asset('/demande/'.$demande->id)}}" class="btn btn-secondary  btn-block">Voir la demande</a><h6>
+  </div>
+  <hr>
+   @endforeach
+        <!-- <h4 class="text-capitalize text-center "> Auth::user()->name </h4>-->
 @else
- <p>Vous n'avez aucune demande </p>
+
+<div class="container">
+
+
+
+      <div class="d-flex justify-content-between mb-3">
+        <div class="card-body">
+<div class="mt-2">
+   <img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}">
+</div>
+
+   <div>
+       <h5 class="text-center ">Bonjour<br><h5 class="text-center font-weight-bold text-uppercase text-success"> {{Auth::user()->name}}</h5><h5 class="text-center mb-5"> vous n'avez aucune demande </h5>
+    </div>
+
+
+     </div>
+      </div>
+
+
+         <hr>
 @endif
 
-    </div>         <!-- <h4 class="text-capitalize text-center "> Auth::user()->name </h4>-->
-  </div>
-<hr>
 
 
 @endsection

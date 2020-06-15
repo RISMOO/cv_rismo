@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ressource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class RessourcesController extends Controller
 {
@@ -54,9 +55,8 @@ class RessourcesController extends Controller
     }
 
 
-    }
 
-
+}
 
 
 

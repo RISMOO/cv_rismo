@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Syncopate&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Syncopate&display=swap);"UTF-8";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -21,9 +21,9 @@
   --white: #fff;
   --gray: #555;
   --gray-dark: #222;
-  --primary: #2A9FD6;
+  --primary: #00b8de;
   --secondary: #555;
-  --success: #77B300;
+  --success: rgba(119, 179, 0, 0.555);
   --info: #9933CC;
   --warning: #FF8800;
   --danger: #CC0000;
@@ -67,12 +67,12 @@ section {
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
   color: #ADAFAE;
   text-align: left;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -385,7 +385,7 @@ h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #fff;
+
 }
 
 h1,
@@ -511,7 +511,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #000000;
+  background-color: #ffffff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -579,6 +579,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  background-color: white;
+  border:1px solid white;
 }
 
 @media (min-width: 576px) {
@@ -2725,7 +2727,7 @@ fieldset:disabled a.btn {
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #2387b7;
+  background-color:#00b8de;
   border-color: #2180ac;
   box-shadow: 0 0 0 0.2rem rgba(74, 173, 220, 0.5);
 }
@@ -2733,7 +2735,7 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #2A9FD6;
+  background-color: #00b8de;
   border-color: #2A9FD6;
 }
 
@@ -2741,7 +2743,7 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2180ac;
+  background-color: #00b8de;
   border-color: #1f78a1;
 }
 
@@ -3039,13 +3041,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #2A9FD6;
+  color:#fff ;
   border-color: #2A9FD6;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #2A9FD6;
+  background-color: #00b8de;
   border-color: #2A9FD6;
 }
 
@@ -3056,7 +3058,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-  color: #2A9FD6;
+  color: #fff;
   background-color: transparent;
 }
 
@@ -3064,7 +3066,7 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2A9FD6;
+  background-color: #00b8de;
   border-color: #2A9FD6;
 }
 
@@ -3225,7 +3227,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-danger:hover {
   color: #fff;
-  background-color: #CC0000;
+  background-color: rgba(204, 0, 0, 0.651);
   border-color: #CC0000;
 }
 
@@ -3450,10 +3452,11 @@ input[type=button].btn-block {
   color: #ADAFAE;
   text-align: left;
   list-style: none;
-  background-color: #282828;
+  background-color: #ffffff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 0.25rem;
+
 }
 
 .dropdown-menu-left {
@@ -3621,7 +3624,7 @@ input[type=button].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3632,14 +3635,14 @@ input[type=button].btn-block {
 .dropdown-item:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #2A9FD6;
+  background-color: #00b8de;;
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #2A9FD6;
+  background-color: #00b8de;;
 }
 
 .dropdown-item.disabled,
@@ -4978,7 +4981,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #282828;
+  background-color: #ffffff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -5010,12 +5013,8 @@ input[type=button].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
-  background: rgba(0, 0, 0, 0.87);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border:none;
+  background-color:#fff7f700 ;
+  box-shadow: 0px 0px 5px #000000;
 
 }
 
@@ -5041,15 +5040,21 @@ input[type=button].btn-block {
 }
 
 .card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+background: url(https://www.peppercube.net/sites/default/files/IMT_02_0.png)center center;
+ /* background-color:#fdfdfd;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-clip: border-box;
+  width: 100%;
+  height: auto;
 
-    padding: 1.25rem;
-    background: url(https://www.fondation-mines-telecom.org/wp-content/uploads/2017/05/Incubateur-IMT-Atlantique.png) center center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-header:first-child {
@@ -5304,7 +5309,7 @@ input[type=button].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #2A9FD6;
+  background-color:#00b8de;
   border-color: #2A9FD6;
 }
 
@@ -5526,8 +5531,10 @@ a.badge-dark.focus {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #282828;
+  background-color: #353434f1;
   border-radius: 0.3rem;
+  background-color:#131313ce;
+
 }
 
 @media (min-width: 576px) {
@@ -6194,6 +6201,7 @@ a.close.disabled {
 
 .toast-body {
   padding: 0.75rem;
+
 }
 
 .modal-open {
@@ -10953,7 +10961,7 @@ a.text-dark:focus {
 }
 
 .navbar.bg-dark {
-  background-color: #724c4cb2 !important;
+  background-color: #000000 !important;
   border: 1px solid #282828;
 }
 
@@ -10970,7 +10978,7 @@ a.text-dark:focus {
 }
 
 .btn-primary {
-  background-color: #2A9FD6;
+  background-color:#00b8de;
 }
 
 .btn-secondary {
@@ -10978,7 +10986,7 @@ a.text-dark:focus {
 }
 
 .btn-success {
-  background-color: #77B300;
+  background-color: rgba(119, 179, 0, 0.623);
 }
 
 .btn-info {
@@ -11274,4 +11282,31 @@ p {
 
 h6 {
   font-family: "Syncopate", sans-serif;
+
 }
+
+.fa
+
+{
+
+   color: #00b8de;
+}
+
+a
+{
+
+ color: black;
+}
+
+
+.row.vdivide [class*='col-']:not(:last-child):after {
+    background: #0f0f0f;
+    width: 1px;
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
+  }

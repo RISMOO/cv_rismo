@@ -4,15 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-7 mt-5">
-            <div class="card border-secondary">
-                <div class="card-header center pt-3 pb-4 font-weight-bold text-dark">{{ __('Login') }}
-
-
+            <div class="card">
+                <div class="card-header center pt-3 pb-4 mb-4 font-weight-bold text-dark">{{ __('Login') }}
                 </div>
-
-                <div class="card-body ">
-
-
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -20,60 +14,48 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right text-dark">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" class="border form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('email')
+                            @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                            </div>
-
-                        </div>
-
+                             @enderror
+                         </div>
+                     </div>
                         <div class="form-group row">
-                            <label for="password" class=" col-md-4 col-form-label text-md-right text-dark">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right text-dark">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                         <div class="col-md-6">
+                                <input id="password" type="password" class="border form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
+                                <button type="submit" class=" btn btn-primary  btn-block text">Se connecter
+                                </button>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row mb-0">
-
-                            <div class="col-md-9 offset-md-4 ml-6">
-
-                                    <a href="{{ route('register') }}">S'enregistrer </a>
-                                    </div>
-                                    <div class="col-md-9 offset-md-4">
-                                <button type="submit" class="btn btn-outline-primary border-light"><i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
-                                </button><br>
-
-
-                                @if (Route::has('password.request'))
-                                 <small>   <a href="{{ route('password.request') }}">
+                          @if (Route::has('password.request'))
+                                 <small><a href="text-color-primary{{ route('password.request')}}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                 </small>
+                               </small>
+                         @endif
+                         @error('password')
+                          <span class="invalid-feedback" role="alert">
+                             <strong>{{ $message }}</strong>
+                         </span>
+             @enderror
 
-                                @endif
+             <a href="{{ route('register') }}"class=" btn btn-primary btn-block text mb-2">S'enregistrer</a>
+
+     </div>
+         </div>
 
 
-                                    </div>
 
-                        </div>
-                    </form>
-                </div>
+
             </div>
-        </div>
-    </div>
-</div>
+
+               </div>
+                    </form>
+
+
+
 @endsection

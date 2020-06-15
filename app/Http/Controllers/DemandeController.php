@@ -72,11 +72,14 @@ class DemandeController extends Controller
             $this->validate($request,[
 
                 'Labs'=>'required|alpha|between:3,20',
-                'Date_de_debut'=>'required|date',
-                'Date_de_fin'=>'required|date|after:Date_de_debut'
+                'Date_de_debut'=>'required|date|after:now',
+                'Date_de_fin'=>'required|date|after:Date_de_debut',
+                 'ressources'=>'required'
+
 
             ]);
 
+            date_default_timezone_set('Europe/Paris');
 
             $demande=new Demande;
             $demande->Labs=trim($request->input('Labs'));
@@ -85,12 +88,13 @@ class DemandeController extends Controller
             $demande->Date_de_fin=$request->input('Date_de_fin');
             $demande->user_name=auth()->user()->name;
             $demande->user_email=auth()->user()->email;
+            $demande->created_at=time();
 
 
             $demande->user_id=auth()->user()->id;// grace a la fonction auth on recupere l'id et l'utilisateur
             $demande->save();
 
-            return redirect('/home') ->with('success', "votre message  a été envoyé !");
+            return redirect('/home') ->with('success', "votre demande a été envoyé !");
 /*
 
 
@@ -156,8 +160,9 @@ class DemandeController extends Controller
 
         $this->validate($request,[
             'Labs'=>'required|alpha|between:3,20',
-            'Date_de_debut'=>'required|date',
-            'Date_de_fin'=>'required|apres:Date_de_debut'
+            'Date_de_debut'=>'required|date|after:now',
+            'Date_de_fin'=>'required|after:Date_de_debut',
+            'ressource'=>'required'
 
         ]);
 
@@ -189,5 +194,32 @@ class DemandeController extends Controller
       $demande->delete();//on supprime la demande
       return redirect('/home')
       ->with('success', "Votre demande a bien été supprimé !");
+    }
+
+        /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create_from($id)
+    {
+        $ressources = Ressource::All();//avant le pluck on nous renvoyé un tableau indexé
+        $ressources_rebuild = array();
+        foreach($ressources as $ressource):
+            $ressources_rebuild[$ressource['id']] = $ressource['title'];//transformé en tableau associatif
+        endforeach;
+        $ressource_selected = strip_tags($id);//retourne une chaine str apres avoir supprimé tous les balises php et html
+//dd($ressource_selected);
+
+
+
+
+        return view ('demandes.create')->with(['success','Votre ressources a été selectionné','ressources'=> $ressources_rebuild,'ressource_selected'=> $ressource_selected ]);
+
+
+
+
+
+
     }
 }

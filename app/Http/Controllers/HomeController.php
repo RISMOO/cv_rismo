@@ -35,7 +35,11 @@ class HomeController extends Controller
         $user_id=auth()->user()->id;
         $user=User::find($user_id);
 
-      //  ->orderBy('created_at', 'desc');
+       /*->orderBy('created_at', 'desc');*/
+
+
+
+
 
 
 
@@ -50,4 +54,6 @@ class HomeController extends Controller
 
 
 
-}
+    }
+
+

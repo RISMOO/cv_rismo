@@ -16,16 +16,26 @@
         </li>-->
 
 <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-    <div class="dropdown-menu border-secondary" style="Menu">
-        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"><br><hr>
+   <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-light font-weight-bold">menu</h6></a>
+    <div class="dropdown-menu border" style="menu">
+        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"><br><hr></a>
 
-      <a class="dropdown-item" href="/catalogue">Catologue Ressources</a>
-      <a class="dropdown-item" href="/demande/create">Demande de labs</a>
+      <a class="dropdown-item" href="/catalogue">Catalogue Ressources</a>
+
+      <a class="dropdown-item text-black" href="/demande/create">Demande de labs</a>
 
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home"></i> Home</a> </a>
+      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home"></i>Home</a>
+
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item text-dark" href="/Demo"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Comment faire une demande</a>
     </div>
+    </div>
+
+
+
+</div>
+
 
     </div>
   </li>
@@ -34,7 +44,7 @@
    @else
   @endif
                     <!-- Right Side Of Navbar -->
-         <ul class="nav navbar-nav navbar-right">
+         <ul class="nav navbar-nav navbar-right ">
                         <!-- Authentication Links -->
          @if (Auth::guest())
 
@@ -42,9 +52,9 @@
                    @else
 
                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->name }}</a>
-                    <div class="dropdown-menu border-secondary  dropdown-menu-right " style="Menu">
-                        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"><br><hr>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-success font-weight-bold text-uppercase">{{ Auth::user()->name }}</h6></a>
+                    <div class="dropdown-menu border  dropdown-menu-right " style="Menu">
+                        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"><br><hr>
 
                       <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
                       <a class="dropdown-item" href="/admin"></i>Admin</a>

@@ -3,41 +3,45 @@
 @section('content')
 
 
+<div class="card-body">
+
 <div class="row">
- <div class="col-md-12 text-right">
+ <div class="col-md-12 text-left">
 
+    <h5> {{$ressources->title}}</h5>
 
-   </div>
-  </div>
-<div class="card mb-3">
+<div class="text-center">
 
-
-<img class="img-thumbnail" src="{{asset('storage/'.$ressources->image)}}"alt="{{$ressources->title}}">
-  <div class="card-body">
-    <p class="text-white">{!!$ressources->body!!}</p>
-      <h5><a href="{{$ressources->lien}}">WIKIPEDIA<h5></a>
+<img src="{{asset('storage/'.$ressources->image)}}" class="img-thumbnail top rounded mx-auto d-block"  alt="Responsive image">
+</div>
+    <p class="">{!!$ressources->body!!}</p>
+      <a href="{{$ressources->lien}}"><h5 class="text-primary">WIKIPEDIA<h5></a>
         <hr>
 
- <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <img class="img-thumbnail" src="{{asset('storage/'.$ressources->exemple)}}"alt="{{$ressources->title}}"></li>
- </ul>
-     <div class="card-body">
-        <h6>Liens utiles</h6>
+
+      <img class="img-thumbnail top rounded mx-auto d-block" src="{{asset('storage/'.$ressources->exemple)}}"alt="{{$ressources->title}}"><hr>
+
+
         @if($ressources->lien2 ? $ressources->lien : null)
-          <li class="list-group-item"><a href="{{$ressources->lien2}}" class="card-link">OpenClassroom</a></li>
+        <h5>Liens utiles</h5>
+
+          <a href="{{$ressources->lien2}}"><h5 class="text-primary">OpenClassroom</h5></a>
       @endif
          @if($ressources->lien3 ? $ressources->lien3 : null)
-          <li class="list-group-item"><a href="{{$ressources->lien3}}" class="card-link">Udemy</a></li>
+          <a href="{{$ressources->lien3}}"><h5 class="text-primary">Udemy</h5></a><hr><br>
       @endif
-    </div>
-  <div class="card-footer text-muted">
-    <h6><a href="/demande/create" class="border-secondary btn btn-outline-primary btn-block"style="margin-bottom:15px">Faire une demande</a></h6>
+
+
+
+      
+
+
+    <h6 class="text-center"><a href="{{asset('demande/create/'.$ressources->id)}}" class="border btn btn-secondary btn-block">Faire une demande</a></h6><br>
 
 
   </div>
- </div>
 
+</div>
 
-
+</div>
 @endsection

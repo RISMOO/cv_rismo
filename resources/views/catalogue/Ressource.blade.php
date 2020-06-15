@@ -3,14 +3,16 @@
 
 
 @section('slider')
-
+<h5 class="text-blue">{{$catalogue}}</h5>
+<div class="card-body">
 
 <div class="row">
 <div class="col-md-12 mt-5">
 
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <h5 class="text-blue">{{$catalogue}}</h5>
+
+
             @foreach ($ressources as $ressource)
 
 
@@ -39,26 +41,26 @@
     <div class="row">
         @foreach ($ressources as $ressource)
         <div class="col-md-4">
-        <div class="card ">
+
          <a href="{{url('/catalogue/'.$ressource->slug)}}"><!--helper route -->
-        <img class="card-img-top rounded mx-auto d-block" src="{{asset('/storage/'.$ressource->image)}}" alt="image">
-            <div class="card-body">
+        <img class="img-thumbnail top rounded mx-auto d-block height:100vh" src="{{asset('/storage/'.$ressource->image)}}" alt="image">
+
             <h4 class="card-title">{{$ressource->title}}</h4></a>
             <p class="card-text">{{ $ressource->excerpt }}</p>
             </div>
-        </div>
 
-    </div>
+
+
 
 @endforeach
 
 
-
-
-<div class="pagination">
+    </div>
+</div>
+<div class="pagination mt-2">
     {{$ressources->links()}}
 
-</div>
+
 
 
 @endsection

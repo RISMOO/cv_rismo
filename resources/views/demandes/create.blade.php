@@ -4,9 +4,9 @@
 
 
 @section('content')
-<div class="jumbotron mt-5">
+<div class="card-body">
 
-    <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Negatif_Baseline_250x170.png')}}"></a><hr>
+    <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"></a>
 
 
 <h3 class="text-primary">Demande de labs </h3>
@@ -18,37 +18,39 @@
 {!! Form::open(['action'=> 'DemandeController@store','method'=>'POST']) !!}
 
 <div class="form-group">
-    <p class="text-primary"> {{ Form::label('Nom du Lab','Nom du Lab')}}</p>
-     <p> {{ Form::text('Labs','',['class'=>'form-control ','placeholder'=>'Le nom du Lab'])}}</p>
+    <h5 class="text-light"> {{ Form::label('Nom du Lab','Nom du Lab')}}</h5>
+     <h6 class="">{{ Form::text('Labs','',['class'=>'form-control border text-muted','placeholder'=>''])}}</h6>
 
+     </div>
   </div>
 <div class="form-group">
 
-<p class="text-primary">{{Form::label('Ressources disponibles', 'Ressources disponibles')}}</p>
+<h5 class="text-light">{{Form::label('Ressources disponibles', 'Ressources disponibles')}}</h5>
 
-<p>{{Form::select('ressources',$ressources,'0',['class'=>'custom-select font-weight-bold ','placeholder'=> 'Ressources'])}}</p>
+<h6>{{Form::select('ressources',$ressources,(isset($ressource_selected)) ? $ressource_selected : '0',['class'=>'custom-select border text-success font-weight-bold ','placeholder'=> ''])}}</p>
 
 </div>
 <div class="form-group">
 
-    <p class="text-primary">{{ Form::label('Date de début','Date de début ')}}</p>
-   <p> {{ Form::Date('Date_de_debut','',['class'=>'form-control ','placeholder'=>'Date de debut','required'])}}</p>
+    <h5 class="text-light">{{ Form::label('Date de début','Date de début ')}}</h5>
+   <h6> {{ Form::Date('Date_de_debut','',['class'=>'form-control border text-dark ','placeholder'=>'','required'])}}</h6>
 </div>
 
 <div class="form-group">
 
-    <p class="text-primary"> {{ Form::label('Date de fin','Date de fin')}}</p>
-   <p> {{ Form::Date('Date_de_fin','',['class'=>'form-control ','placeholder'=>'Date de fin','required'])}}</p>
+    <h5 class="text-light"> {{ Form::label('Date de fin','Date de fin')}}</h5>
+   <h6> {{ Form::Date('Date_de_fin','',['class'=>'form-control border text-dark','placeholder'=>'','required'])}}</h6>
 </div>
 
 
+<br>
 
-<hr>
 <h5>
 
 
-{!! Form::submit("Envoyer ",['class'=>'border-secondary btn btn-outline-primary btn-block'])!!}
-</h5>
+
+{!! Form::submit("Envoyer ",['class'=>'border mt-3 btn btn-secondary btn-block '])!!}
+</h5><br>
 
 {!! Form::close()!!}
 

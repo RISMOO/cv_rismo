@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 /////////////////DEMANDE//////////////////////////
 Route::post('/demande', 'DemandeController@create');
+Route::get('/demande/create/{id}', 'DemandeController@create_from');
 Route::resource('demande','DemandeController');
 
 
@@ -49,3 +50,9 @@ Auth::routes();
 Route::get('/','HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all','DemandeController@index');
+
+
+///////////////////////DEMO APPLICATION////////////////
+
+
+Route::get('/Demo','DemoController@demo');
