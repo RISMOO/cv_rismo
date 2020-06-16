@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<h6 class="text-right"><a href="/home/"><i class="fa fa-angle-left" style="font-size:20px"></i>&nbsp; Retour</a></h6>
 <div class="card-body">
      <a class="mt-1 "><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"></a><br>
          <h4 class="text-primary text-center"> Votre demande<hr>
