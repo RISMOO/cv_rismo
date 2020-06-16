@@ -39,10 +39,6 @@ class HomeController extends Controller
 
 
 
-
-
-
-
         return view ('home')->with(['demande'=>$user->demande]);
 
 

@@ -50,7 +50,8 @@ class DemandeController extends Controller
 
 
 
-        return view ('demandes.create')->with(['ressources'=> $ressources_rebuild]);
+
+        return view ('demandes.create')->with(['ressources'=> $ressources_rebuild,]);
 
 
 
@@ -89,6 +90,7 @@ class DemandeController extends Controller
             $demande->user_name=auth()->user()->name;
             $demande->user_email=auth()->user()->email;
             $demande->created_at=time();
+
 
 
             $demande->user_id=auth()->user()->id;// grace a la fonction auth on recupere l'id et l'utilisateur

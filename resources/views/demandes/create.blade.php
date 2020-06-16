@@ -28,7 +28,7 @@
 <h5 class="text-light">{{Form::label('Ressources disponibles', 'Ressources disponibles')}}</h5>
 
 <h6>{{Form::select('ressources',$ressources,(isset($ressource_selected)) ? $ressource_selected : '0',['class'=>'custom-select border text-success font-weight-bold ','placeholder'=> ''])}}</p>
-
+    
 </div>
 <div class="form-group">
 
@@ -45,7 +45,7 @@
 
 <br>
 
-<h5>
+<h5 class=""><i class="fas fa-brain"></i>
 
 
 

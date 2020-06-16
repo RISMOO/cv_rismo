@@ -25,7 +25,7 @@
       <a class="dropdown-item text-black" href="/demande/create">Demande de labs</a>
 
       <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a>
 
       <div class="dropdown-divider"></div>
       <a class="dropdown-item text-dark" href="/Demo"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Comment faire une demande</a>
@@ -52,12 +52,12 @@
                    @else
 
                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-success font-weight-bold text-uppercase">{{ Auth::user()->name }}</h6></a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-primary font-weight-bold text-uppercase">{{ Auth::user()->name }}</h6></a>
                     <div class="dropdown-menu border  dropdown-menu-right " style="Menu">
                         <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"><br><hr>
 
                       <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
-                      <a class="dropdown-item" href="/admin"></i>Admin</a>
+                      <a class="dropdown-item" href="/admin"><i class="fa fa-user"></i>&nbsp;  Admin</a>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
