@@ -11,19 +11,19 @@
         <div class="row vdivide">
 
             <div class="col-sm-3 text-center"><h5 class="text-light">Nom du lab</h5><hr>
-                <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->Labs}}<span></h6>
+                <h6 class="text-primary font-weight-bolder  " style="font-size:20px" style="font-size:18px">{{$demande->Labs}}<span></h6>
             </div>
 
             <div class="col-sm-3 text-center"><h5 class="text-light">Ressource</h5><hr>
-             <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
+             <h6 class="text-primary font-weight-bolder " style="font-size:20px" style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
 
             </div>
             <div class="col-sm-3 text-center"><h5 class="text-light">Date debut</h5><hr>
-                <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->Date_de_debut}}<span></h6>
+                <h6 class="text-primary font-weight-bolder  " style="font-size:20px" style="font-size:18px">{{$demande->Date_de_debut}}<span></h6>
 
                </div>
                <div class="col-sm-3 text-center"><h5 class="text-light">Date fin</h5><hr>
-                <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->Date_de_fin}}<span></h6>
+                <h6 class="text-primary font-weight-bolder " style="font-size:20px" style="font-size:18px">{{$demande->Date_de_fin}}<span></h6>
 
                </div>
         </div>

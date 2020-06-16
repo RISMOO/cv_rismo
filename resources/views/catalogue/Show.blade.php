@@ -33,7 +33,7 @@
 
 
 
-      
+
 
 
     <h6 class="text-center"><a href="{{asset('demande/create/'.$ressources->id)}}" class="border btn btn-secondary btn-block">Faire une demande</a></h6><br>

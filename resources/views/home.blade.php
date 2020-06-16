@@ -23,11 +23,11 @@
     <div class="card-body">
      @if(!count($demande) == 0)
       <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"></a>
-       <h3 class="text-primary text-center">Liste <br>de vos demandes en cours </h3>
+       <h3 class="text-primary text-center mb-4">Liste <br>de vos demandes en cours </h3>
 
 @endif
  @if(count($demande)>=1)
-     <h6 class="text-center mb-2">Vous avez &nbsp;<strong class="text-success font-size-2rem">{{count($demande)}}</strong>&nbsp;&nbsp;demande{{ count($demande) > 1 ? 's' : "" }}&nbsp;en cours </h6>
+     <h6 class="text-center mb-2">Vous avez &nbsp;<strong class="text-primary font-weight-bolder font-size-2rem">{{count($demande)}}</strong>&nbsp;&nbsp;demande{{ count($demande) > 1 ? 's' : "" }}&nbsp;en cours </h6>
 @endif
 
    @if(count($demande) >= 1 )
@@ -38,17 +38,17 @@
 
         <div class="w3-tag w3-round w3-green col-sm-4 text-center">
 
-            <h5 class="text-light"> Nom du lab</h5><hr>
+            <h5 class="text-light "> Nom du lab</h5><hr>
 
-            <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->Labs}}<span></h6>
+            <h6 class="text-primary font-weight-bolder  " style="font-size:18px">{{$demande->Labs}}<span></h6>
         </div>
 
         <div class="col-sm-4 text-center"><h5 class="text-light">Ressource</h5><hr>
-         <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
+         <h6 class="text-primary font-weight-bolder  "  style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
 
         </div>
         <div class="col-sm-4 text-center"><h5 class="text-light">Demande le</h5><hr>
-            <h6 class="text-success " style="font-size:20px" style="font-size:18px">{{$demande->created_at}}<span></h6>
+            <h6 class="text-primary font-weight-bolder " style="font-size:18px">{{$demande->created_at}}<span></h6>
 
            </div>
 
@@ -57,9 +57,9 @@
 
 
 
-        <h6 class="text-center"><a href="{{asset('/demande/'.$demande->id)}}" class="btn btn-secondary  btn-block">Voir la demande</a><h6>
+        <h6 class="text-center"><a href="{{asset('/demande/'.$demande->id)}}" class="btn btn-secondary mb-4  btn-block">Voir la demande</a><h6>
   </div>
- <hr>
+
    @endforeach
         <!-- <h4 class="text-capitalize text-center "> Auth::user()->name </h4>-->
 @else
