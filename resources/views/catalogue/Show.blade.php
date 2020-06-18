@@ -12,14 +12,14 @@
 
 <div class="text-center">
 
-<img src="{{asset('storage/'.$ressources->image)}}" class="img-thumbnail top rounded mx-auto d-block"  alt="Responsive image">
+<img src="{{asset('/storage/'.$ressources->image)}}" class="img-thumbnail top rounded mx-auto d-block" alt="Responsive image">
 </div>
-    <p class="">{!!$ressources->body!!}</p>
-      <a href="{{$ressources->lien}}"><h5 class="text-primary">WIKIPEDIA<h5></a>
+    <p class="text-muted">{!!$ressources->body!!}</p>
+     <a href="{{$ressources->lien}}"><h5 class="text-primary">WIKIPEDIA</h5></a>
         <hr>
 
 
-      <img class="img-thumbnail top rounded mx-auto d-block" src="{{asset('storage/'.$ressources->exemple)}}"alt="{{$ressources->title}}"><hr>
+      <img class="img-thumbnail top rounded mx-auto d-block" src="{{asset('/storage/'.$ressources->exemple)}}" alt="{{$ressources->title}}"><hr>
 
 
         @if($ressources->lien2 ? $ressources->lien : null)

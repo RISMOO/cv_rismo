@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/css.css')}}">
-  
+
 @yield('stylesheets')
     <title>{{ config('app.name', 'LABS_RESSOURCES') }}</title>
 
@@ -18,14 +18,18 @@
 <body>
 
         @include('inc.navbar')
+
         <div class="container">
+
             @yield('slider')
+
     @include('inc.errorsuccess')
+
     @yield('content')<!--permet d'afficher le contenu -->
 </div>
 <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 @yield('javascripts')
-    </body>
+</body>
 </html>
 

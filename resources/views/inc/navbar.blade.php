@@ -17,8 +17,8 @@
 
 <li class="nav-item dropdown ">
    <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-light font-weight-bold">menu</h6></a>
-    <div class="dropdown-menu border" style="menu">
-        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"><br><hr></a>
+    <div class="dropdown-menu border">
+        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"><br><hr></a>
 
       <a class="dropdown-item" href="/catalogue">Catalogue Ressources</a>
 
@@ -30,17 +30,17 @@
       <div class="dropdown-divider"></div>
       <a class="dropdown-item text-dark" href="/Demo"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Comment faire une demande</a>
     </div>
-    </div>
-
-
-
-</div>
-
+</li>
+</ul>
 
     </div>
-  </li>
 
-    </ul>
+
+
+
+
+
+
    @else
   @endif
                     <!-- Right Side Of Navbar -->
@@ -53,8 +53,8 @@
 
                    <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-primary font-weight-bold text-uppercase">{{ Auth::user()->name }}</h6></a>
-                    <div class="dropdown-menu border  dropdown-menu-right " style="Menu">
-                        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"><br><hr>
+                    <div class="dropdown-menu border  dropdown-menu-right ">
+                        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"></a><br><hr>
 
                       <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
                       <a class="dropdown-item" href="/admin"><i class="fa fa-user"></i>&nbsp;  Admin</a>
@@ -63,19 +63,21 @@
                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
                        Se deconnecter
                    </a>
-
+                    </div>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{csrf_field()}}
                                     </form>
-                                </li>
-                            </ul>
-                         </li>
-                        @endif
-                    </ul>
-                </div>
 
-        </nav>
+                         </li>
+                        </ul>
+
+                    </nav>
+                        @endif
+
+
+
+
 
 
 

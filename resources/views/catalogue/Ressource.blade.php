@@ -18,7 +18,7 @@
 
 
           <div class="carousel-item @if($loop->first) active @endif">
-          <img class="d-block w-100 rounded mx-auto d-block"src="{{asset('/storage/'.$ressource->image)}}"  alt="{{$ressource->title}}"height="500" width='100%'>
+          <img class="d-block w-100 rounded mx-auto d-block" src="{{asset('/storage/'.$ressource->image)}}" alt="{{$ressource->title}}" height="500" width='100'>
           </div>
         @endforeach
 
@@ -57,10 +57,11 @@
 
     </div>
 </div>
+
 <div class="pagination mt-2">
     {{$ressources->links()}}
 
-
+</div>
 
 
 @endsection

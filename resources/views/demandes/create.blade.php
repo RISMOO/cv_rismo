@@ -6,7 +6,7 @@
 @section('content')
 <div class="card-body">
 
-    <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}"></a>
+    <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"></a>
 
 
 <h3 class="text-primary">Demande de labs </h3>
@@ -19,42 +19,39 @@
 {!! Form::open(['action'=> 'DemandeController@store','method'=>'POST']) !!}
 
 <div class="form-group">
-    <h5 class="text-light"> {{ Form::label('Nom du Lab','Nom du Lab')}}</h5>
-     <h6 class="">{{ Form::text('Labs','',['class'=>'form-control border text-muted','placeholder'=>''])}}</h6>
+    <h5 class="text-light"> {{ Form::label('Nom','Nom du Lab')}}</h5>
+     <p>{{Form::text('Labs','',['class'=>'form-control border text-muted'])}}</p>
 
      </div>
-  </div>
+
 <div class="form-group">
 
-<h5 class="text-light">{{Form::label('Ressources disponibles', 'Ressources disponibles')}}</h5>
+<h5 class="text-light">{{Form::label('Ressources_Disponibles','Ressources disponibles')}}</h5>
 
-<h6>{{Form::select('ressources',$ressources,(isset($ressource_selected)) ? $ressource_selected : '0',['class'=>'custom-select border font-weight-bold ','placeholder'=> ''])}}</p>
+<p>{{Form::select('ressources',$ressources,(isset($ressource_selected)) ? $ressource_selected : '0',['class'=>'custom-select border ','placeholder'=> 'ressources disponibles'])}}</p>
 
 </div>
 <div class="form-group">
 
-    <h5 class="text-light">{{ Form::label('Date de début','Date de début ')}}</h5>
-   <h6> {{ Form::Date('Date_de_debut','',['class'=>'form-control border text-dark ','placeholder'=>'','required'])}}</h6>
+    <h5 class="text-light">{{ Form::label('Date_de_debut','Date de debut')}}</h5>
+   <p> {{ Form::Date('Date_de_debut','',['class'=>'form-control border text-dark ','required'])}}</p>
 </div>
 
 <div class="form-group">
 
-    <h5 class="text-light"> {{ Form::label('Date de fin','Date de fin')}}</h5>
-   <h6> {{ Form::Date('Date_de_fin','',['class'=>'form-control border text-dark','placeholder'=>'','required'])}}</h6>
+    <h5 class="text-light"> {{ Form::label('Date_de_fin','Date de fin')}}</h5>
+   <p>{{ Form::Date('Date_de_fin','',['class'=>'form-control border text-dark','required'])}}</p>
 </div>
-
 
 <br>
 
-<h5 class=""><i class="fas fa-brain"></i>
+<p>{!! Form::submit("Envoyer ",['class'=>'border mt-3 btn btn-secondary btn-block '])!!}
 
 
-
-{!! Form::submit("Envoyer ",['class'=>'border mt-3 btn btn-secondary btn-block '])!!}
-</h5><br>
+</p><br>
 
 {!! Form::close()!!}
 
 </div>
-
+</div>
 @endsection
