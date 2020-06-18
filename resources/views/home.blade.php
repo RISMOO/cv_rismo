@@ -9,8 +9,8 @@
         <div class="d-flex justify-content-between col-12">
 
           <h6 class="text-black" style="font-size:24px"><a href="/demande/create">
-            <i class="fa fa-angle-right" style="font-size:34px"></i> Faire une demande</a></h6>
-              <h6 class="text-black" style="font-size:24px"><a href="/catalogue/">Voir le catalogue <i class="fa fa-angle-left" style="font-size:34px"></i></a></h6>
+            <i class="fa fa-arrow-circle-o-right" style="font-size:24px"></i></i> Faire une demande</a></h6>
+              <h6 class="text-black" style="font-size:24px"><a href="/catalogue/">Voir le catalogue <i class="fa fa-arrow-circle-o-left" style="font-size:24px"></i></a></h6>
           </div>
         </div>
             <br>
@@ -38,13 +38,13 @@
 
         <div class="w3-tag w3-round w3-green col-sm-4 text-center">
 
-            <h5 class="text-light "> Nom du lab</h5><hr>
+            <h5 class="text-light "> Nom du lab </h5><hr>
 
-            <h6 class="text-primary font-weight-bolder  " style="font-size:18px">{{$demande->Labs}}<span></h6>
+            <h6 class="text-primary font-weight-bolder " style="font-size:18px">{{$demande->Labs}}<span></h6>
         </div>
 
         <div class="col-sm-4 text-center"><h5 class="text-light">Ressource</h5><hr>
-         <h6 class="text-primary font-weight-bolder  "  style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
+         <h6 class="text-primary font-weight-bolder" style="font-size:18px">{{$demande->ressource['title']}}<span></h6>
 
         </div>
         <div class="col-sm-4 text-center"><h5 class="text-light">Demande le</h5><hr>
