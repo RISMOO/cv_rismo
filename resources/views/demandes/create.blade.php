@@ -6,7 +6,7 @@
 @section('content')
 <div class="card-body">
 
-    <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"></a>
+    <a class=""><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="logo"></a>
 
 
 <h3 class="text-primary">Demande de labs </h3>

@@ -5,10 +5,11 @@
 <div class="card-body">
 
 
-    <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"></a>
+    <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="logo"></a>
 <h3 class="text-primary">Modifier votre demande  </h3>
 
 <hr>
+<p>
 {!! Form::open(['action'=> ['DemandeController@update',$demande->id],'method'=>'POST']) !!}
 
 <div class="form-group">
@@ -37,15 +38,17 @@
 
 
 <br>
-    {{Form::hidden('_method','PUT')}}<!--mettre a jour avec la methode PUT-->
-  <h6>{{Form::submit("Valider votre demande ",['class'=>'border btn btn-secondary btn-block'])}}</h6><br>
 
+    {{Form::hidden('_method','PUT')}}<!--mettre a jour avec la methode PUT-->
+ <h6> {{Form::submit("Valider votre demande ",['class'=>'border btn btn-secondary btn-block'])}}</h6>
+
+  {!! Form::close()!!}
 
 {!! Form::open(['action'=>['DemandeController@destroy',$demande->id],'method'=>'POST']) !!}
 {{ Form::hidden('_method','DELETE')}}
 <h6>{{ Form::submit('Supprimer votre demande',['class'=>'border btn btn-secondary btn-block'] )}}</h6>
 {!! Form::close() !!}
-
+  </p>
 
 </div>
 @endsection

@@ -55,8 +55,9 @@
     </div>
 
 
-
-        <a href="{{asset('/demande/'.$demande->id)}}" class="btn btn-secondary mb-4  btn-block"><h6>Voir la demande</h6></a>
+         <p>
+        <a href="{{asset('/demande/'.$demande->id)}}" class="btn btn-secondary mb-4  btn-block">Voir la demande</a>
+         </p>
   </div>
 
    @endforeach

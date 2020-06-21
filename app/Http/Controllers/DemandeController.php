@@ -83,6 +83,10 @@ class DemandeController extends Controller
             date_default_timezone_set('Europe/Paris');
 
             $demande=new Demande;
+            $test_labs = Demande::where('Labs', $request->input('Labs'))
+                                    ->get()
+                                    ->count();
+        if($test_labs == 0){
             $demande->Labs=trim($request->input('Labs'));
             $demande->ressource_id=$request->input('ressources');
             $demande->Date_de_debut=$request->input('Date_de_debut');
@@ -91,7 +95,10 @@ class DemandeController extends Controller
             $demande->user_email=auth()->user()->email;
             $demande->created_at=time();
 
-
+        } else {
+            return redirect('/demande/create')
+            ->with('error',"Ce nom existe déja !");
+        }
 
             $demande->user_id=auth()->user()->id;// grace a la fonction auth on recupere l'id et l'utilisateur
             $demande->save();
@@ -167,6 +174,10 @@ class DemandeController extends Controller
             'ressource'=>'required'
 
         ]);
+        $test_labs = Demande::where('Labs', $request->input('Labs'))
+        ->get()
+        ->count();
+if($test_labs == 0){
 
         $demande=Demande::find($id);//on va chercher la demande que l'on veut modifier
         $demande->ressource_id=$request->input('ressource');
@@ -174,6 +185,15 @@ class DemandeController extends Controller
         $demande->Date_de_debut=$request->input('Date_de_debut');
         $demande->Date_de_fin=$request->input('Date_de_fin');
         $demande->save();
+
+    } else {
+        return redirect('/demande/create')
+        ->with('error',"Ce nom existe déja !");
+    }
+
+
+
+
 
         return redirect('/home')
         ->with  ('success', "Votre demande a bien été modifié !");
@@ -195,7 +215,7 @@ class DemandeController extends Controller
       $demande=Demande::find($id);//on recupere lid de la demande
       $demande->delete();//on supprime la demande
       return redirect('/home')
-      ->with('success', "Votre demande a bien été supprimé !");
+      ->with('success', "Votre demande a bien été supprimée !");
     }
 
         /**
