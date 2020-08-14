@@ -1,82 +1,69 @@
-@if (Auth::user())
+<header class="header-area" id="header-area">
+    <div class="dope-nav-container breakpoint-off">
+        <div class="container">
+            <div class="row">
+ <nav class="dope-navbar justify-content-between" id="dopeNav">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-blue">&nbsp;
+    <!-- Logo -->
+    <a class="nav-brand" href="/">
+        <img src="images/logo-rond.png" alt="">
+    </a>
 
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor02">
-
-      <ul class="navbar-nav mr-auto">
-          <!--
-        <li class="nav-item active">
-          <a class="nav-link" href="/contact">Demande de Labs<span class="sr-only">(current)</span></a>
-        </li>-->
-
-<li class="nav-item dropdown ">
-   <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-light font-weight-bold">menu</h6></a>
-    <div class="dropdown-menu border">
-        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"><br><hr></a>
-
-      <a class="dropdown-item" href="/catalogue">Catalogue Ressources</a>
-
-      <a class="dropdown-item text-black" href="/demande/create">Demande de labs</a>
-
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="/home"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a>
-
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item text-dark" href="/Demo"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Comment faire une demande</a>
-    </div>
-</li>
-</ul>
-
+    <!-- Navbar Toggler -->
+    <div class="dope-navbar-toggler">
+        <span class="navbarToggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
     </div>
 
+    <!-- Menu -->
+    <div class="dope-menu">
 
+        <!-- close btn -->
+        <div class="dopecloseIcon">
+            <div class="cross-wrap">
+                <span class="top"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
 
+        <!-- Nav Start -->
+        <div class="dopenav">
+            <ul id="nav">
+                    <li>
+                        <a href="#section-blog">A propos</a>
+                    </li>
+                    <a href="#section-portfolio">Projets</a>
+                    <li>
+                        <a href="#section-message">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#section-contact">Contact</a>
 
+                </li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Cv
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/experiences">Expériences</a>
+                         <a class="dropdown-item" href="/competences">Compétences</a>
+                          <a class="dropdown-item" href="/formations">Formations</a>
+                          <a class="dropdown-item" href="/loisirs">Loisirs</a>
 
-
-
-   @else
-  @endif
-                    <!-- Right Side Of Navbar -->
-         <ul class="nav navbar-nav navbar-right ">
-                        <!-- Authentication Links -->
-         @if (Auth::guest())
-
-
-                   @else
-
-                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/home" role="button" aria-haspopup="true" aria-expanded="false"><h6 class="text-primary font-weight-bold text-uppercase">{{ Auth::user()->name }}</h6></a>
-                    <div class="dropdown-menu border  dropdown-menu-right ">
-                        <a class="mt-2"><img src="{{asset('images/IMT_Atlantique_logo_RVB_Baseline_250x170.jpg')}}" alt="IMT"></a><br><hr>
-
-                      <a class="dropdown-item" href="/home"><i class='fa fa-archway'></i>Tableau de bord</a>
-                      <a class="dropdown-item" href="/admin"><i class="fa fa-user"></i>&nbsp;  Admin</a>
-                      <a class="dropdown-item" href="{{ route('logout') }}"
-                      onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>
-                       Se deconnecter
-                   </a>
                     </div>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{csrf_field()}}
-                                    </form>
-
-                         </li>
-                        </ul>
-
-                    </nav>
-                        @endif
-
-
-
+                  </div>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- Nav End -->
+</nav>
+ </div>
+     </div>
+      </div>
+        </header>
 
 
 

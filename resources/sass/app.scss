@@ -13,3 +13,9 @@
 
 
 
+@import "custom";//j'importe mon fichier custom.scss
+
+div
+{
+background-color: $pink;
+}
