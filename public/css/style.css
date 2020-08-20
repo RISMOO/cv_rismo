@@ -15,7 +15,7 @@ Author:    F4H3M
 	1.3	Flexbox
 	1.4	Reset
 2.  Elements
-3.  Menu
+3.  Menu 
 4.  Hero
 5.  Home
 6.  Price
@@ -36,7 +36,7 @@ Author:    F4H3M
 /*  Font Family and Colors Styles
 /* =================================== */
 /* =================================== */
-/*  Basic Style
+/*  Basic Style 
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
@@ -313,7 +313,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Common Styles
+/*  Common Styles 
 /* =================================== */
 .scroll-top {
   width: 40px;
@@ -393,7 +393,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Preloader Styles
+/*  Preloader Styles 
 /* =================================== */
 #loader-wrapper {
   position: fixed;
@@ -414,7 +414,7 @@ td, th {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #3c4de7;
+  border-top-color: #691cff;
   -webkit-animation: spin 2s linear infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 2s linear infinite;
@@ -431,7 +431,7 @@ td, th {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #126586;
+  border-top-color: #f51dac;
   -webkit-animation: spin 3s linear infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 3s linear infinite;
@@ -559,7 +559,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Banner Styles
+/*  Banner Styles 
 /* =================================== */
 .header-area {
   position: fixed;
@@ -1377,7 +1377,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Banner Styles
+/*  Banner Styles 
 /* =================================== */
 .banner-section {
   background-color: #f51dac;
@@ -1481,13 +1481,13 @@ td, th {
 }
 
 .banner-section2 {
-  background: url(../img/13_4.jpg);
+  background: url(../img/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 .banner-section2 .overlay-bg {
-  background: url(../img/13_4.jpg);
+  background: url(../img/banner-overlay1.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1535,7 +1535,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Features Styles
+/*  Features Styles 
 /* =================================== */
 .featured-section .row {
   padding-bottom: 75px;
@@ -1793,7 +1793,7 @@ td, th {
 }
 
 /* =================================== */
-/*  About Styles
+/*  About Styles 
 /* =================================== */
 .about-section .overlay-bg1 {
   background: url(../img/bg2.png);
@@ -1896,7 +1896,7 @@ td, th {
   }
 }
 /* =================================== */
-/*  Testimonial Styles
+/*  Testimonial Styles 
 /* =================================== */
 .testimonial-section {
   padding-top: 120px;
@@ -2047,7 +2047,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Portfolio Styles
+/*  Portfolio Styles 
 /* =================================== */
 .portfolio-section .single-portfolio {
   margin-bottom: 30px;
@@ -2133,7 +2133,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Blog Styles
+/*  Blog Styles 
 /* =================================== */
 .blog-section .blog-wrap {
   border-top: 1px solid #eee;
@@ -2535,7 +2535,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Team Styles
+/*  Team Styles 
 /* =================================== */
 .team-section {
   background-color: #eee;
@@ -2597,7 +2597,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Accordian Styles
+/*  Accordian Styles 
 /* =================================== */
 .home-faq-section {
   padding-top: 120px;
@@ -2694,7 +2694,7 @@ td, th {
 }
 
 /* =================================== */
-/*  CTA Styles
+/*  CTA Styles 
 /* =================================== */
 .cta-section {
   background: url(../img/banner2.jpg);
@@ -2714,7 +2714,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Price Styles
+/*  Price Styles 
 /* =================================== */
 .price-section .price-left h4 {
   font-size: 35px;
@@ -2784,7 +2784,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Download Styles
+/*  Download Styles 
 /* =================================== */
 .download-section {
   background: url(../img/download-bg.png);
@@ -2815,7 +2815,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Clients Styles
+/*  Clients Styles 
 /* =================================== */
 .clients-wrap {
   padding: 30px 0px;
@@ -2838,7 +2838,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Stat Styles
+/*  Stat Styles 
 /* =================================== */
 .stat-section {
   background: #691cff;
@@ -2857,7 +2857,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Contact Styles
+/*  Contact Styles 
 /* =================================== */
 .contact-section {
   background: url(../img/download-bg.png);
@@ -2952,7 +2952,7 @@ td, th {
 }
 
 /* =================================== */
-/*  Footer Styles
+/*  Footer Styles 
 /* =================================== */
 .footer-section {
   background: #222;

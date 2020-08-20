@@ -9,7 +9,8 @@ class IndexController extends Controller
 {
     public function index (){
         $messages=Message::orderBy('created_at','desc')
-        ->paginate(2);
+        ->paginate(1);
+
         return view ("about.index")->with('messages',$messages);
     }
 }

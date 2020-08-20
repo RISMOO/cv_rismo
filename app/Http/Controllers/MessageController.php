@@ -15,9 +15,6 @@ class MessageController extends Controller
     public function index()
     {
 
-        $messages=Message::all();
-
-        return view ('/')->with('messages',$messages);
     }
 
     /**
@@ -27,7 +24,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        return view ('/');
+
     }
 
     /**
@@ -42,7 +39,8 @@ class MessageController extends Controller
 
             'nom'=>'alpha|between:3,20|required',
             'email'=>'email|required',
-            'message'=>'between:3,255|required'
+            'message'=>'between:3,255|required',
+            'fonction'=>'between:3,50|required'
 
         ]);
 
@@ -50,6 +48,7 @@ class MessageController extends Controller
         $message->nom=trim($request->input('nom'));
         $message->email=$request->input('email');
         $message->message=$request->input('message');
+        $message->fonction=$request->input('fonction');
 
         $message->save();
         return redirect('/') ->with('success', " Votre message a été envoyé et publié !");

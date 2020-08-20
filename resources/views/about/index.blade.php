@@ -3,329 +3,549 @@
 
 
 @section('content')
-
-<!-- Start header section -->
-
-
-        <!-- Preloader -->
-
-        <div id="loader-wrapper">
-            <div id="loader"></div>
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-        </div>
-    <!-- Start page-top-banner section -->
-    <section class="banner-section relative section-gap-full" id="banner-section">
-        <div class="overlay overlay-bg"></div>
+<header class="header-area" id="header-area">
+    <div class="dope-nav-container breakpoint-off">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 banner-left">
-                    <h1 class="text-uppercase">BIENVENU<hr> SUR MON SITE</h1>
-                  <p> Bonjour,fraichement diplomé,j'ai créé ce site afin de mettre en pratique mes connaissances acquises lors de ma formation.Il sera développé en Laravel pour la partie Back-end et en Vuejs pour le Front-end</p>
-                    <!--a class="video-btn primary-btn" href="about-us.html">About More</a-->
+            <div class="row">
+ <nav class="dope-navbar justify-content-between" id="dopeNav">
+
+    <!-- Logo -->
+    <a class="nav-brand" href="/">
+        <img src="images/logo-rond.png" alt="">
+    </a>
+
+    <!-- Navbar Toggler -->
+    <div class="dope-navbar-toggler">
+        <span class="navbarToggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+
+    <!-- Menu -->
+    <div class="dope-menu">
+
+        <!-- close btn -->
+        <div class="dopecloseIcon">
+            <div class="cross-wrap">
+                <span class="top"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
+
+        <!-- Nav Start -->
+        <div class="dopenav">
+            <ul id="nav">
+                    <li>
+                        <a href="#section_about">A PROPOS</a>
+                    </li>
+                    <li>
+                    <a href="#section_projets">PROJETS</a>
+                    </li>
+                    <li>
+                        <a href="#section_messages">MESSAGES</a>
+                    </li>
+                    <li>
+                        <a href="#section_contact">CONTACT</a>
+
+                    </li>
+                    <li>
+                            <a href="cv">CV</a>
+                        </li>
+
+
+
+            </ul>
+        </div>
+    </div> <!-- Nav End -->
+</nav>
+ </div>
+     </div>
+      </div>
+        </header><br>
+        <section class="skill-section section-gap-half">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 skill-left">
+                        <h2>Bienvenue sur mon site</h2>
+                        <p>
+                            Fraichement diplomé,j'ai créé ce site afin de mettre en pratique mes connaissances acquises lors de ma formation.Il sera développé en <strong><a href=" https://fr.wikipedia.org/wiki/Laravel" title="source Wikipedia"> Laravel </strong></a>pour la partie Back-end et en <strong><a href="https://fr.wikipedia.org/wiki/Vue.js" title="Source Wikipedia"> Vuejs </a></strong> le Front-end</p></p>
+                        </p><hr>
+                        <h2>Progression du site</h2><br>
+
+                        <div class="prog_container">
+                            <div class="prog_text">
+                                <span class="title">
+                                    design
+                                </span>
+                                <span class="precent" style="left:85%">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="prog_container">
+                            <div class="prog_text">
+                                <span class="title">
+                                    securité
+                                </span>
+                                <span class="precent" style="left:95%">95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="prog_container">
+                            <div class="prog_text">
+                                <span class="title">
+                                    responsive
+                                </span>
+                                <span class="precent" style="left:99%">99%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="99"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <div class="prog_container">
+                            <div class="prog_text">
+                                <span class="title">
+                                    vue js
+                                </span>
+                                <span class="precent" style="left:75%">75%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 skill-right">
+                    <img class="img-fluid" src="{{asset('images/construct.jpg')}}"alt="">
+                    </div>
                 </div>
-                <div class="col-md-6 banner-right text-center">
-                    <img class="rounded-circle" src="{{asset('image/screen1.png')}}" alt="">
-                    <div class=zoom>
-                        <div class=image>
-<a href="{{asset('images/Titre.jpg')}}"><img class="img-fluid z-depth-2 rounded" src="{{asset('images/Titre.jpg')}}" alt="developpeur web"/></a>
+            </div>
+        </section>
+        <!-- End skill section -->
+
+        <!-- Start stat section -->
+        <section class="stat-section section-gap-half">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-stat">
+                            <i class="ti-thumb-up"></i>
+                            <h1>
+                                <span class="counter">3</span>+</h1>
+                            <h4>Projets Réalisés</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-stat">
+                            <i class="ti-face-smile"></i>
+                            <h1>
+                                <span class="counter">20</span>+</h1>
+                            <h4>Avis</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-stat">
+                            <i class="ti-paint-bucket"></i>
+                            <h1>
+                                <span class="counter">132</span>+</h1>
+                            <h4>Tasse de café</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-stat">
+                            <i class="ti-check-box"></i>
+                            <h1>
+                                <span class="counter">2</span>+</h1>
+                            <h4>Projets en cours</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="wave">
-            <svg class="nectar-shape-divider" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"
-                preserveAspectRatio="none">
-                <path d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path>
-                <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path>
-                <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
-            </svg>
-        </div>
+        </section>
+
+        <!-- End banner section -->
+
+        <!-- Start about section -->
+        <section class="about-section section-gap-full relative" id="section_about">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-12 about-left">
+                        <div class="zoom">
+                            <div class="image w-100">
+                                <div class="post-thumb relative">
+                                    <div class="overlay overlay-bg"></div>
+                                      <img class="img-thumbnail w-100" src="{{asset('images/plage.jpg')}}" alt="">
+                               </div>
+
+                    </div>
+                </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 about-right">
+
+                        <h3>A propos</h3>
+
+                        <h2>Qui suis je</h2>
+                        <p>
+                            Passionné par le monde du web depuis toujours,j'ai souhaité donner un tournant a ma vie professionnel en suivant une formation. J'ai obtenu le titre de développeur Web et Web mobile a <a href='https://www.afpa.fr/centre/centre-de-brest'>l'AFPA de Brest</a>
+                        </p>
+                        <a class="primary-btn" href="#">Download Resume </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-shapes">
+                <span data-parallax='{"x": 150, "y": -20, "rotateZ":500}'>
+                    <img src="{{asset('images/shape/fl-shape-1.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": 250, "y": 150, "rotateZ":500}'>
+                    <img src="{{asset('images/shape/fl-shape-2.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": -180, "y": 80, "rotateY":2000}'>
+                    <img src="{{asset('images/shape/fl-shape-3.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": -20, "y": 180}'>
+                    <img src="{{asset('images/shape/fl-shape-4.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": 300, "y": 70}'>
+                    <img src="{{asset('images/shape/fl-shape-5.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": 250, "y": 180, "rotateZ":1500}'>
+                    <img src="{{asset('images/shape/fl-shape-6.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": 180, "y": 10, "rotateZ":2000}'>
+                    <img src="{{asset('images/shape/fl-shape-7.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": 60, "y": -100}'>
+                    <img src="{{asset('images/shape/fl-shape-8.png')}}" alt="">
+                </span>
+                <span data-parallax='{"x": -30, "y": 150, "rotateZ":1500}'>
+                    <img src="{{asset('images/shape/fl-shape-9.png')}}" alt="">
+                </span>
+            </div>
+        </section>
+
+
     </section>
-    <!-- End about-top-banner section -->
-    <section class="portfolio-section section-gap-full" id="section-portfolio">
+    <section class="service-section section-gap-full"id="section_projets">
         <div class="container">
             <div class="section-title">
                 <h2 class="text-center">Mes Projets</h2>
-                <p class="text-center">Quelques projets de ma conception</p>
+                <p class="text-center">Réalisation en formation</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6 cl">
-                            <div class="single-portfolio">
-                                <img alt="" class="img-fluid" src="{{asset('images/virtualbox.jpg')}}">
-                                <div class="box-content">
-                                    <a href="single-portfolio.html">
-                                        <h5 class="title">Projet1</h5>
-                                    </a>
-                                    <span class="post">Virtual Box</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 cl">
-                            <div class="single-portfolio">
-                                <img alt="" class="img-fluid" src="{{asset('images/laravelvuejs.png')}}">
-                                <div class="box-content">
-                                    <a href="single-portfolio.html">
-                                        <h5 class="title">projet2</h5>
-                                    </a>
-                                    <span class="post">Laravel & Vuejs</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="single-portfolio">
-                                <img alt="" class="img-fluid" src="{{asset('images/thumb2.png')}}">
-                                <div class="box-content">
-                                    <a href="single-portfolio.html">
-                                        <h5 class="title">Projet de stage</h5>
-                                    </a>
-                                    <span class="post">Laravel et Voyager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+            <div class="row owl-carousel ml-5" id="service-carusel">
+
+                <div class="single-service mr-5">
+
+                    <i class="ti-server" style="color:#691cff"></i>
+                    <h4>CV</h4>
+                    <p>
+                        Un des 1er projets réalisé en php......
+                    </p><br>
+            <p>
+                <a href="#">Voir le projet</a>
+            </p>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="single-portfolio">
-                                <img alt="" class="img-fluid" src="{{asset('images/cv.png')}}">
-                                <div class="box-content">
-                                    <a href="single-portfolio.html">
-                                        <h5 class="title">Projet2</h5>
-                                    </a>
-                                    <span class="post">Mon CV</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="single-portfolio">
-                                <img alt="" class="img-fluid" src="{{asset('images/lafleur.png')}}">
-                                <div class="box-content">
-                                    <a href="single-portfolio.html">
-                                        <h5 class="title">Projet3</h5>
-                                    </a>
-                                    <span class="post">La fleur</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
+
+                <div class="single-service mr-5">
+                    <i class="ti-server" style="color:#691cff"></i>
+                    <h4>La fleur</h4>
+                    <p>
+                        V3 du projet lafleur réalisé en php .....
+                    </p><br>
+                    <p>
+                        <a href="#">Voir le projet</a>
+                    </p>
                 </div>
+                <div class="stage">
+                <div class="single-service">
+                    <i class="ti-server" style="color:#691cff"></i>
+                    <h4>Stage</h4>
+                    <p>
+                        Réalisation d'une application ....
+                             </p><br>
+            <p>
+                <a href="#">Voir le projet</a>
+            </p>
+                </div>
+                </div>
+
+            </div>
             </div>
         </div>
     </section>
-    <!-- End portfolio section -->
+        <!-- Start feature section -->
+        <section class="feature-section section-gap-full" id="feature-section">
+            <div class="container">
+                <div class="row align-items-center feature-wrap">
+                    <div class="col-lg-4 header-left">
+                        <h2>
 
-    <!-- Start blog-lists section -->
-    <section class="blog-lists-section section-gap-full" id="section-blog">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="text-center">A propos</h2>
-                <p class="text-center">Quelques infos</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="blog-details">
-                        <div class="post-thumb relative">
-                            <div class="overlay overlay-bg"></div>
-                            <img class="img-fluid" src="{{asset('images/plage.jpg')}}" alt="">
-                        </div>
-                        <div class="post-details">
-                            <!--
-                            <ul class="tags">
-                                <li><a href="#">Learn</a></li>
-                                <li><a href="#">Dream</a></li>
-                            </ul>
-                        -->
-                            <a href="single-blog.html">
-                                <h1>A propos de moi </h1>
-                            </a>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ut nisi fugiat vero libero magnam aliquid quos corporis! At, labore numquam. Ratione esse unde illo harum adipisci officia voluptate nulla.
-                            </p>
-                            <p>
-                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                                mollitia animi, id est laborum et dolorum fuga.
-                            </p>
-                            <blockquote class="blockquote">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod teminc ididunt ut labore et dolore.Lorem ipsum
-                                    dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod temporSed ut perspiciatis unde omnis natus error sit voluptatem accusantium
-                                    doloremque laudantium.</p>
-                            </blockquote>
-                            <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                voluptatem sequi nesciunt.
+                            <br>Parcours
+                               Professionnel
 
-                                On the other hand, we denounce with righteous indignation and dislike men who are so
-                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
-                                that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
-                                belongs to those who fail in their duty through weakness
-                            </p>
-                        </div>
+                        </h2>
+                        <a class="primary-btn" href="/cv">En voir Plus
+                            <span class="ti-arrow-right"></span>
+                        </a>
                     </div>
-                    <div class="comment-wrap" id="section-message">
+                    <div class="col-lg-8">
+                        <div class="row features-wrap">
+                            <div class="col-md-6">
 
+                                <div class="single-feature relative">
 
-                        <h3>Vos Messages</h3>
-
-
-                        @foreach ($messages as $message)
-                        <div class="media comments">
-                            <img class="mr-3 z-depth-3 rounded" src="{{asset('images/moia.png')}}" alt="Generic placeholder image">
-                            <div class="media-body">
-                            <h5 class="mt-0">{{$message->nom}}</h5>
-                                <p>
-                                   {{$message->message}}
-                                </p>
-                                <div class="comment-buttons">
-                                    <a href="#" class="primary-btn black-btn">Répondre</a>
-                                </div>
-                                <div class="media mt-3 replay-comment">
-                                    <a class="pr-3" href="#">
-                                        <img src="{{asset('images/moia.png')}}" alt="Generic placeholder image">
+                                    <div class="overlay overlay-bg"></div>
+                                    <a href="/cv#section_competences">
+                                    <span class="ti-comments-smiley"></span>
                                     </a>
-                                    <div class="media-body">
-                                        <h5 class="mt-0"></h5>
-                                        <p>
-                                        </p>
-                                        <div class="comment-buttons">
-                                            <a href="#" class="primary-btn black-btn">Répondre</a>
-                                        </div>
-                                    </div>
+                                    <h3>Compétences</h3></a>
+                                    <h5>Extrait</h5>
+                                    <p>
+                                        Html5, css3....
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                     @endforeach
-                        <div class="media comments">
-                            <img class="mr-3 img-thumbnail" src="{{asset('images/moia.png')}}" width="2rem" height="2rem" alt="profil">
-                            <div class="media-body">
-                                <h5 class="mt-0"></h5>
-                                <p>
-                                </p>
-                                <div class="comment-buttons">
-                                    <a href="#" class="primary-btn black-btn">Répondre</a>
+
+                            <div class="col-md-6">
+
+                                <div class="single-feature relative">
+                                    <div class="overlay overlay-bg"></div>
+                                    <a href="/cv#section_experience">
+                                    <span class="ti-paint-roller"></span>
+                                    </a>
+                                     <h3>Experiences</h3></a>
+                                    <h5>Extrait</h5>
+                                    <p>
+                                        Stage pratique....
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-feature relative">
+                                    <div class="overlay overlay-bg"></div>
+                                    <a href="/cv#section_formations">
+                                    <span class="ti-pencil-alt"></span>
+                                    </a>
+                                   <h3>Formations</h3>
+                                    <h5>Extrait</h5>
+                                    <p>
+                                        Developpeur Web.....
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <br>
-
-
-
-                    <div class="comment-wrap" id="section-contact">
-
-                    <h3>Laisser un message</h3>
-                    <div class="form-group">
-                  {!! Form::open(['action'=> 'MessageController@store','method'=>'POST']) !!}
-
-                        <div class="row form-col-wrap">
-                            <div class="col-lg-6 form-cols">
-                                <div class="form-group">
-                                    <h5 class="text-muted">{{ Form::label('nom','Nom')}}</h5>
-                                     <p>{{Form::text('nom','',['class'=>'form-control border text-muted','placeholder'=>'Votre nom','required'])}}</p>
-                                     </div>
+                            <div class="col-md-6">
+                                <div class="single-feature relative">
+                                    <div class="overlay overlay-bg"></div>
+                                    <a href="/cv#section_soft">
+                                    <span class="ti-more"></span>
+                                    </a>
+                                   <h3>Softskills</h3>
+                                    <h5>Extrait</h5>
+                                    <p>
+                                        Curieux....
+                                    </p>
                                 </div>
-                            <div class="col-lg-6 form-cols">
-              <div class="form-group">
-         <h5 class="text-muted">{{Form::label('email','Email')}}</h5>
-        <p>{{Form::text('email','',['class'=>'form-control border text-muted','placeholder'=>'Votre Email','required'])}}</p>
-      </div>
-            </div>
-                 </div>
-                    <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-
-                                    <h5 class="text-muted">{{ Form::label('Votre message','Votre message')}}</h5>
-                                   <p> {{ Form::textarea('message','',['class'=>'form-control border text-dark ','placeholder'=>'Votre message','required'])}}</p>
-                                </div>
-                                <p>{!! Form::submit("Envoyer ",['class'=>'primary-btn black text-center border'])!!}
-                                </p><br>
-                              {!! Form::close()!!}
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="sidebar-wrap">
-                        <div class="single-widget search-widget">
-                            <h4 class="widget-title">Rechercher ici</h4>
-                            <div class="sidebar-form">
-                                <form action="#" class="relative">
-                                    <input type="text" placeholder="Recherche..."  onfocus="this.placeholder=''" onblur="this.placeholder='Search'">
-                                    <button type="submit">
-                                        <i class="ti-search"></i>
-                                    </button>
-                                </form>
+            </div>
+        </section>
+        <!-- End feature section -->
+
+<section class="testimonial-section section-gap-full" id="section_messages">
+    @foreach($messages as $message)
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 testimonial-left">
+                <h2>Vos Messages</h2>
+                <p>
+                    Ici vous trouverez les messages publiés
+                </p>
+            </div>
+            <div class="col-lg-8 testimonial-right">
+                <div class="testimonial-carusel owl-carousel" id="testimonial-carusel">
+                    <div class="single-testimonial item">
+                        <p>
+                            {{$message->message}}
+                        </p>
+                        <div class="user-details d-flex flex-row align-items-center">
+                            <div class="img-wrap">
+                            <img src="{{asset('images/moi-mini.png')}}" alt="">
+                            </div>
+                            <div class="details">
+                            <h4>{{$message->nom}}</h4>
+                            <p>{{$message->fonction}}</p>
                             </div>
                         </div>
-                        <div class="single-widget social-widget text-center">
-                            <h4 class="widget-title">Réseaux sociaux</h4>
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="https://www.facebook.com/">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
+                    </div>
 
-                                <li>
-                                    <a target="_blank" href="#">
-                                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://www.linkedin.com/in/m-s-91700619b/">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-widget banner-widget">
-                            <img class="img-fluid" src="{{asset('images/banner.jpg')}}" alt="">
-                        </div>
-                        <div class="single-widget tags-widget">
-                            <h4 class="widget-title">Catégories</h4>
-                            <ul>
-                                <!--
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Tech</a></li>
-                                <li><a href="#">Travel</a></li>
-                                <li><a href="#">Reviews</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Music</a></li>
-                                <li><a href="#">Lifestyle</a></li>
-                                <li><a href="#">Gadget</a></li>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Gaming</a></li>
-                                -->
-                            </ul>
+                    <div class="single-testimonial item">
+                        <p>
+                            “Bravo.Bon début”
+                        </p>
+                        <div class="user-details d-flex flex-row align-items-center">
+                            <div class="img-wrap">
+                            <img src="{{asset('images/avt1.jpg')}}"alt="">
+                            </div>
+                            <div class="details">
+                                <h4>Remi paillet</h4>
+                                <p>Web Developer</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="single-testimonial item">
+                        <p>
+                            “Félicitation pour ton titre.”
+                        </p>
+                        <div class="user-details d-flex flex-row align-items-center">
+                            <div class="img-wrap">
+                            <img src="{{asset('images/avt2.jpg')}}"alt="">
+                            </div>
+                            <div class="details">
+                                <h4>Regis Amber</h4>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
         </div>
-    </section>
-    <!-- End blog-lists section -->
-
-    <div class="scroll-top">
-        <i class="ti-angle-up"></i>
+        </div>
     </div>
+    @endforeach
+</section>
+
+
+        <section class="contact-section padding-top-140" id="section_contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="text-center">Contactez-moi</h2>
+                    <p class="text-center">Laissez moi un message</p>
+                </div>
+                <div class="row address-wrap justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
+                        <i class="ti ti-mobile"></i>
+                        <p>
+                            +880-176875479
+                            <br>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
+                        <i class="ti ti-map-alt"></i>
+                        <p>
+                            1 rue de la destiné
+                            <br> Brest 29200
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 single-address-col">
+                        <i class="ti ti-email"></i>
+                        <p>
+                            tysef@live.fr
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="row justify-content-center form-row">
+                    <div class="col-lg-9">
+
+                            {!! Form::open(['action'=> 'MessageController@store','method'=>'POST']) !!}
+                            <div class="row contact-form-wrap justify-content-center">
+                                <div class="col-md-6 contact-name form-col">
+                                  <h5>{{ Form::label('nom','Nom')}}</h5>
+                                        <h6 class="text-capitalize">{{Form::text('nom','',['class'=>'form-control','required','text'=>'capitalize','placeholder'=>'Votre nom','onfocus'=>"placeholder",'onblur'=>'placeholder'])}}</h6>
+                                </div>
+                                <div class="col-md-6 contact-fonction form-col">
+                                    <h5> {{Form::label('fonction','Fonction')}}</h5>
+                                    <h6 class="text-capitalize">{{Form::text('fonction','',['class'=>'form-control','required','placeholder'=>'Votre fonction','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
+
+                                 </div>
+
+                                <div class="col-lg-12 contact-email form-col">
+                                   <h5> {{Form::label('email','Email')}}</h5>
+                                   <p>{{Form::text('email','',['class'=>'form-control','required','placeholder'=>'Votre email','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
+
+                                </div>
+
+
+                                <div class="col-lg-12">
+                                    <h5>{{ Form::label('message','Message')}}</h5>
+                                    <p class="text-capitalize">{{ Form::textarea('message','',['class'=>'form-control','required','placeholder'=>'Votre message','row'=>'8','text'=>'capitalize','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
+
+                                </div>
+                                {!! Form::submit("Envoyer ",['class'=>'primary-btn','value'=>'Envoyer','id'=>'submit-message'])!!}
+
+                                <div id="msg" class="message"></div>
+                            </div>
+
+                    </div>
+                </div>
+
+                {!! Form::close()!!}
+            </div>
+        </section>
+        <!-- End contact section -->
+
+        <!-- Start footer section -->
+        <footer class="footer-section section-gap-half">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 footer-left">
+                        <a href="#">
+                            <img src="img/logo-w.png" alt="">
+                        </a>
+                        <p class="copyright-text">&copy; 2020
+                            <i class="fa fa-heart" aria-hidden="true"></i> By
+                            Rismo
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul id="social">
+                            <li>
+                                <a target="_blank" href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <!-- End footer section -->
+
+        <div class="scroll-top">
+            <i class="ti-angle-up"></i>
+        </div>
 @endsection
 

@@ -26,7 +26,7 @@ Route::get('/','indexController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 /////////////////CV/////////////////////
-Route::get('/competences','CvController@competences');
+Route::get('/cv','CvController@index');
 Route::get('/experiences','CvController@experiences');
 Route::get('/loisirs','CvController@loisirs');
 Route::get('/formations','CvController@formations');

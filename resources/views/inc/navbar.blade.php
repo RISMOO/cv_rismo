@@ -33,29 +33,24 @@
         <div class="dopenav">
             <ul id="nav">
                     <li>
-                        <a href="#section-blog">A propos</a>
-                    </li>
-                    <a href="#section-portfolio">Projets</a>
-                    <li>
-                        <a href="#section-message">Messages</a>
+                        <a href="#section_about">A PROPOS</a>
                     </li>
                     <li>
-                        <a href="#section-contact">Contact</a>
+                    <a href="#section_projets">PROJETS</a>
+                    </li>
+                    <li>
+                        <a href="#section_messages">MESSAGES</a>
+                    </li>
+                    <li>
+                        <a href="#section_contact">CONTACT</a>
 
-                </li>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Cv
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="/experiences">Expériences</a>
-                         <a class="dropdown-item" href="/competences">Compétences</a>
-                          <a class="dropdown-item" href="/formations">Formations</a>
-                          <a class="dropdown-item" href="/loisirs">Loisirs</a>
+                    </li>
+                    <li>
+                            <a href="cv">CV</a>
+                        </li>
 
-                    </div>
-                  </div>
-                </li>
+
+
             </ul>
         </div>
     </div> <!-- Nav End -->
