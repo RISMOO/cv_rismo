@@ -6,6 +6,9 @@
         "framework",
         "laravel"
     ],
+
+
+
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
@@ -64,10 +67,14 @@
             "@php artisan key:generate --ansi"
         ]
     },
+
+   
+
     "repositories": {
         "hooks": {
             "type": "composer",
             "url": "https://larapack.io"
         }
+
     }
 }

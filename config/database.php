@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mysql_production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +63,9 @@ return [
             ]) : [],
         ],
 
+
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
@@ -91,7 +94,7 @@ return [
             'prefix_indexes' => true,
         ],
 
-    ],
+
 
     /*
     |--------------------------------------------------------------------------
