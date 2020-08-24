@@ -13,7 +13,7 @@
 
     <!-- Logo -->
     <a class="nav-brand" href="/">
-        <img src="images/logo-rond.png" alt="">
+      <i class="fa fa-code fa-2x"></i>
     </a>
 
     <!-- Navbar Toggler -->
@@ -54,6 +54,11 @@
                     </li>
                     <li>
                             <a href="cv">CV</a>
+
+                        </li>
+
+                        <li>
+                            <i class="fa fa-user-cog">ghfg</i>
                         </li>
 
 
@@ -96,7 +101,7 @@
 <!-- End about-top-banner section -->
 
 <!-- Start blog-lists section -->
-<section class="blog-lists-section section-gap-full"id="section_competences">
+<section class="blog-lists-section section-gap-full"id="section_competences"data-stellar-background-ratio="0.5" >
 
     <div class="container">
         <div class="row justify-content-center">
@@ -146,6 +151,7 @@
          </div>
        </div>
     </div>
+
 </div>
 <br>
 @endforeach
@@ -229,6 +235,9 @@
                 </div>
             </div>
         </div>
+
+
+
      </section>
      <section class="section section-gap-full" id="section-portfolio">
          <div class="single-blog-post"id="section_experience">
@@ -386,6 +395,7 @@
 
 
                    <div class="scroll-top">
+
                      <i class="ti-angle-up"></i>
                       </div>
 @endsection

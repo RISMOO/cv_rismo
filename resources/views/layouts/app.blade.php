@@ -38,7 +38,7 @@
 
 <body>
 
-   
+
 
 
 
@@ -55,20 +55,17 @@
 
 
 
-
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="js/vendor/popper.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.parallax-scroll.js"></script>
-<script src="js/dopeNav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/main.js"></script>
-
-
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax-scroll.js"></script>
+    <script src="js/dopeNav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/main.js"></script>
 
 
 @yield('javascripts')

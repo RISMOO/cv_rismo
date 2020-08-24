@@ -33,7 +33,7 @@ Route::get('/formations','CvController@formations');
 
 
 //////////////////////ADMIN/////////////////////////
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'damin'], function () {
     Voyager::routes();
 });
 

@@ -11,7 +11,7 @@
 
     <!-- Logo -->
     <a class="nav-brand" href="/">
-        <img src="images/logo-rond.png" alt="">
+        <i class="fa fa-code fa-2x"></i>
     </a>
 
     <!-- Navbar Toggler -->
@@ -39,6 +39,7 @@
             <ul id="nav">
                     <li>
                         <a href="#section_about">A PROPOS</a>
+
                     </li>
                     <li>
                     <a href="#section_projets">PROJETS</a>
@@ -54,6 +55,10 @@
                             <a href="cv">CV</a>
                         </li>
 
+ <li>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/damin"><img class="img-fluid m-2" src="{{asset('images/admini.png')}}" alt="competences"></a>
+                        </li>
+
 
 
             </ul>
@@ -64,13 +69,23 @@
      </div>
       </div>
         </header><br>
-        <section class="skill-section section-gap-half">
+
+        <section class="skill-section section-gap-half mt-3">
+
             <div class="container">
+                <router-view></router-view>
+                <div id="app"><!--start vuejs-->
+                    <example-component></example-component>
+                </div>
+
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 skill-left">
+
+
                         <h2>Bienvenue sur mon site</h2>
                         <p>
-                            Fraichement diplomé,j'ai créé ce site afin de mettre en pratique mes connaissances acquises lors de ma formation.Il sera développé en <strong><a href=" https://fr.wikipedia.org/wiki/Laravel" title="source Wikipedia"> Laravel </strong></a>pour la partie Back-end et en <strong><a href="https://fr.wikipedia.org/wiki/Vue.js" title="Source Wikipedia"> Vuejs </a></strong> le Front-end</p></p>
+                            Fraichement diplomé,j'ai créé ce site afin de mettre en pratique mes connaissances acquises lors de ma formation.Il sera développé en <strong><a href=" https://fr.wikipedia.org/wiki/Laravel" title="source Wikipedia"> Laravel </strong></a>pour la partie Back-end et en <strong><a href="https://fr.wikipedia.org/wiki/Vue.js" title="Source Wikipedia"> Vuejs </a></strong>le Front-end.<br>Bonne navigation</p>
+
                         </p><hr>
                         <h2>Progression du site</h2><br>
 
@@ -118,10 +133,10 @@
                                 <span class="title">
                                     vue js
                                 </span>
-                                <span class="precent" style="left:75%">75%</span>
+                                <span class="precent" style="left:30%">30%</span>
                             </div>
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30"
                                     aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -132,11 +147,13 @@
                     </div>
                 </div>
             </div>
+
         </section>
+        <!--end vue js-->
         <!-- End skill section -->
 
         <!-- Start stat section -->
-        <section class="stat-section section-gap-half">
+        <section class="stat-section section-gap-half ml-5 mr-5 pl-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -160,7 +177,7 @@
                             <i class="ti-paint-bucket"></i>
                             <h1>
                                 <span class="counter">132</span>+</h1>
-                            <h4>Tasse de café</h4>
+                            <h4>Tasses de café</h4>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -196,13 +213,13 @@
 
                     <div class="col-lg-6 col-md-12 about-right">
 
-                        <h3>A propos</h3>
 
-                        <h2>Qui suis je</h2>
+
+                        <h2>A propos</h2>
                         <p>
-                            Passionné par le monde du web depuis toujours,j'ai souhaité donner un tournant a ma vie professionnel en suivant une formation. J'ai obtenu le titre de développeur Web et Web mobile a <a href='https://www.afpa.fr/centre/centre-de-brest'>l'AFPA de Brest</a>
+                            Passionné par le monde du web depuis toujours,j'ai souhaité donner un tournant a ma vie professionnel en suivant une formation. J'ai obtenu le titre de développeur Web et Web mobile a <a href='https://www.afpa.fr/centre/centre-de-brest'>l'AFPA de Brest ...</a>
                         </p>
-                        <a class="primary-btn" href="#">Download Resume </a>
+                        <a class="primary-btn" href="#">En savoir plus </a>
                     </div>
                 </div>
             </div>
@@ -242,7 +259,7 @@
     <section class="service-section section-gap-full"id="section_projets">
         <div class="container">
             <div class="section-title">
-                <h2 class="text-center">Mes Projets</h2>
+                <h2 class="text-center"> Mes Projets </h2>
                 <p class="text-center">Réalisation en formation</p>
             </div>
 
@@ -315,7 +332,7 @@
                                     <span class="ti-comments-smiley"></span>
                                     </a>
                                     <h3>Compétences</h3></a>
-                                    <h5>Extrait</h5>
+
                                     <p>
                                         Html5, css3....
                                     </p>
@@ -330,7 +347,7 @@
                                     <span class="ti-paint-roller"></span>
                                     </a>
                                      <h3>Experiences</h3></a>
-                                    <h5>Extrait</h5>
+
                                     <p>
                                         Stage pratique....
                                     </p>
@@ -344,7 +361,7 @@
                                     <span class="ti-pencil-alt"></span>
                                     </a>
                                    <h3>Formations</h3>
-                                    <h5>Extrait</h5>
+
                                     <p>
                                         Developpeur Web.....
                                     </p>
@@ -357,7 +374,7 @@
                                     <span class="ti-more"></span>
                                     </a>
                                    <h3>Softskills</h3>
-                                    <h5>Extrait</h5>
+
                                     <p>
                                         Curieux....
                                     </p>
@@ -370,8 +387,7 @@
         </section>
         <!-- End feature section -->
 
-<section class="testimonial-section section-gap-full" id="section_messages">
-    @foreach($messages as $message)
+<section class="testimonial-section section-gap-full mb-5" id="section_messages">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 testimonial-left">
@@ -382,14 +398,28 @@
             </div>
             <div class="col-lg-8 testimonial-right">
                 <div class="testimonial-carusel owl-carousel" id="testimonial-carusel">
+    @foreach($messages as $message)
                     <div class="single-testimonial item">
                         <p>
                             {{$message->message}}
                         </p>
+
                         <div class="user-details d-flex flex-row align-items-center">
+                    @if($message->photo)
                             <div class="img-wrap">
-                            <img src="{{asset('images/moi-mini.png')}}" alt="">
-                            </div>
+                                <img class="rounded-circle z-depth-2" src="{{asset('/uploads/'.$message->photo)}}">
+
+
+
+                        </div>
+
+                    @else
+
+                        <div class="img-wrap">
+                            <img src="{{asset('images/default.png')}}" alt="avatar">
+                        </div>
+
+                    @endif
                             <div class="details">
                             <h4>{{$message->nom}}</h4>
                             <p>{{$message->fonction}}</p>
@@ -397,112 +427,97 @@
                         </div>
                     </div>
 
-                    <div class="single-testimonial item">
-                        <p>
-                            “Bravo.Bon début”
-                        </p>
-                        <div class="user-details d-flex flex-row align-items-center">
-                            <div class="img-wrap">
-                            <img src="{{asset('images/avt1.jpg')}}"alt="">
-                            </div>
-                            <div class="details">
-                                <h4>Remi paillet</h4>
-                                <p>Web Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-testimonial item">
-                        <p>
-                            “Félicitation pour ton titre.”
-                        </p>
-                        <div class="user-details d-flex flex-row align-items-center">
-                            <div class="img-wrap">
-                            <img src="{{asset('images/avt2.jpg')}}"alt="">
-                            </div>
-                            <div class="details">
-                                <h4>Regis Amber</h4>
-                                <p>UI/UX Designer</p>
-                            </div>
-                        </div>
-                    </div>
+                     @endforeach
 
                 </div>
         </div>
         </div>
     </div>
-    @endforeach
 </section>
 
+<section class="contact-section contact-page-section" id="section_contact">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="text-center">Contactez-moi</h2>
+            <p class="text-center">Laissez moi un message</p>
+        </div>
+        <div class="row address-wrap justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
+                <div class="div">
+                    <i class="ti ti-mobile"></i>
+                    <p>
+                        +880-176875479
 
-        <section class="contact-section padding-top-140" id="section_contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="text-center">Contactez-moi</h2>
-                    <p class="text-center">Laissez moi un message</p>
-                </div>
-                <div class="row address-wrap justify-content-center">
-                    <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
-                        <i class="ti ti-mobile"></i>
-                        <p>
-                            +880-176875479
-                            <br>
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
-                        <i class="ti ti-map-alt"></i>
-                        <p>
-                            1 rue de la destiné
-                            <br> Brest 29200
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 single-address-col">
-                        <i class="ti ti-email"></i>
-                        <p>
-                            tysef@live.fr
-                            <br>
-                        </p>
-                    </div>
+                    </p>
                 </div>
             </div>
-                <div class="row justify-content-center form-row">
-                    <div class="col-lg-9">
+            <div class="col-lg-3 col-md-4 col-sm-6 single-address-col">
+                <div class="div">
+                    <i class="ti ti-map-alt"></i>
+                    <p>
 
-                            {!! Form::open(['action'=> 'MessageController@store','method'=>'POST']) !!}
-                            <div class="row contact-form-wrap justify-content-center">
-                                <div class="col-md-6 contact-name form-col">
-                                  <h5>{{ Form::label('nom','Nom')}}</h5>
-                                        <h6 class="text-capitalize">{{Form::text('nom','',['class'=>'form-control','required','text'=>'capitalize','placeholder'=>'Votre nom','onfocus'=>"placeholder",'onblur'=>'placeholder'])}}</h6>
-                                </div>
-                                <div class="col-md-6 contact-fonction form-col">
-                                    <h5> {{Form::label('fonction','Fonction')}}</h5>
-                                    <h6 class="text-capitalize">{{Form::text('fonction','',['class'=>'form-control','required','placeholder'=>'Votre fonction','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
-
-                                 </div>
-
-                                <div class="col-lg-12 contact-email form-col">
-                                   <h5> {{Form::label('email','Email')}}</h5>
-                                   <p>{{Form::text('email','',['class'=>'form-control','required','placeholder'=>'Votre email','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
-
-                                </div>
-
-
-                                <div class="col-lg-12">
-                                    <h5>{{ Form::label('message','Message')}}</h5>
-                                    <p class="text-capitalize">{{ Form::textarea('message','',['class'=>'form-control','required','placeholder'=>'Votre message','row'=>'8','text'=>'capitalize','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
-
-                                </div>
-                                {!! Form::submit("Envoyer ",['class'=>'primary-btn','value'=>'Envoyer','id'=>'submit-message'])!!}
-
-                                <div id="msg" class="message"></div>
-                            </div>
-
-                    </div>
+                         Brest 29200
+                    </p>
                 </div>
-
-                {!! Form::close()!!}
             </div>
-        </section>
-        <!-- End contact section -->
+            <div class="col-lg-3 col-md-4 col-sm-12 single-address-col">
+                <div class="div">
+                    <i class="ti ti-email"></i>
+                    <p>
+                        tysef@live.fr
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center form-row">
+            <div class="col-lg-9">
+
+                    {!! Form::open(['action'=> 'MessageController@store','method'=>'POST','enctype'=>"multipart/form-data"]) !!}
+
+                    <div class="row contact-form-wrap justify-content-center">
+                        <div class="col-md-6 contact-name form-col">
+                          <h5 class="font-weight-normal">{{ Form::label('nom','Nom *')}}</h5>
+                                <h6 class="text-capitalize">{{Form::text('nom','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>"placeholder",'onblur'=>'placeholder'])}}</h6>
+                        </div>
+                        <div class="col-md-6 contact-fonction form-col">
+                            <h5 class="font-weight-normal"> {{Form::label('fonction','Fonction *')}}</h5>
+                            <h6 class="text-capitalize">{{Form::text('fonction','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</h6>
+
+                         </div>
+
+                        <div class="col-lg-12 contact-email form-col">
+                           <h5 class="font-weight-normal"> {{Form::label('email','Email *')}}</h5>
+                           <p>{{Form::text('email','',['class'=>'form-control','required','placeholder'=>'','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
+
+                        </div>
+
+                        <div class="col-lg-12 form-col">
+
+                            <h5 class="font-weight-normal">{{Form::label('photo','Photo')}}</h5><br>
+                           <p class="">{!!Form::file('photo')!!}</p>
+                         </div>
+                         <br>
+
+                        <div class="col-lg-12">
+                            <h5 class="font-weight-normal">{{ Form::label('message','Message *')}}</h5>
+                            <p class="text-capitalize">{{ Form::textarea('message','',['class'=>'form-control','required','placeholder'=>'','rows'=>'5','text'=>'capitalize','onfocus'=>'placeholder','onblur'=>'placeholder'])}}</p>
+
+                        </div>
+                      <h6>  {!! Form::submit("Envoyer ",['class'=>'primary-btn block','value'=>'Envoyer','id'=>'submit-message'])!!}</h6>
+
+                        <div id="msg" class="message"></div>
+                    </div>
+
+            </div>
+        </div>
+
+        {!! Form::close()!!}
+    </div>
+</section>
+<!-- End contact section -->
+
+
 
         <!-- Start footer section -->
         <footer class="footer-section section-gap-half">
@@ -540,7 +555,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </footer>
         <!-- End footer section -->
 

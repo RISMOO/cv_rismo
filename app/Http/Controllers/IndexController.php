@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index (){
-        $messages=Message::orderBy('created_at','desc')
-        ->paginate(1);
+        $messages=Message::latest()->get();
+        //orderBy('created_at','desc')
+
 
         return view ("about.index")->with('messages',$messages);
     }
