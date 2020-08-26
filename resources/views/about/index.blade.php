@@ -398,7 +398,24 @@
             </div>
             <div class="col-lg-8 testimonial-right">
                 <div class="testimonial-carusel owl-carousel" id="testimonial-carusel">
-    @foreach($messages as $message)
+
+                    <div class="single-testimonial item">
+                        <p>
+                            “Bonjour,laissez moi un message"
+
+                        </p>
+                        <div class="user-details d-flex flex-row align-items-center">
+                            <div class="img-wrap">
+                                <img src="{{asset('images/moia.png')}}" alt="">
+                            </div>
+                            <div class="details">
+                                <h4>Maurice S</h4>
+                                <p>Developpeur Web Junior</p>
+                            </div>
+                        </div>
+                    </div>
+
+              @foreach($messages as $message)
                     <div class="single-testimonial item">
                         <p>
                             {{$message->message}}
@@ -407,7 +424,7 @@
                         <div class="user-details d-flex flex-row align-items-center">
                     @if($message->photo)
                             <div class="img-wrap">
-                                <img class="rounded-circle z-depth-2" src="{{asset('/uploads/'.$message->photo)}}">
+                                <img class="rounded-circle z-depth-2" src="{{asset($message->photo)}}">
 
 
 

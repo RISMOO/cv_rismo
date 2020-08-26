@@ -22,7 +22,7 @@ Route::get('/projets','AboutController@projets');
 ////AUTH///////////////
 
 
-Route::get('/','indexController@index');
+Route::get('/','indexController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 /////////////////CV/////////////////////

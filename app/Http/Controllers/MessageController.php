@@ -55,19 +55,18 @@ class MessageController extends Controller
         $message->email=$request->input('email');
         $message->message=$request->input('message');
         $message->fonction=$request->input('fonction');
-        $message=$request->file('photo');
+        $path = $request->file('photo')->store('public/photos');
+        $nameFile = explode("/", $path)[2];
+        $message->photo= "/storage/photos/" . $nameFile;
         //image upload///
-        if($request->hasFile('photo')){
-// dd($request);
-
+        // dd(Storage::url($message->photo));
 /* Exemple explode
 $pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
 $pieces = explode(" ", $pizza);
 echo $pieces[0]; // piece1
 echo $pieces[1]; // piece2
 */
-       $message->photo = explode('/',$request->photo->store('public'))[1];//retourne une chaine de caractere
-        }
+
 
         $message->save();
         return redirect('/') ->with('success', " Votre message a été envoyé et publié !");

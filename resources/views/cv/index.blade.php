@@ -57,10 +57,7 @@
 
                         </li>
 
-                        <li>
-                            <i class="fa fa-user-cog">ghfg</i>
-                        </li>
-
+                       
 
 
             </ul>
@@ -117,7 +114,7 @@
                                 <blockquote class="blockquote">
 
                                     <div class="user-img text-center">
-                                        <img src="{{asset("images/logo-rond.png")}}" alt="">
+                                        <img class="img-fluid m-2" src="{{asset('images/comp.png')}}" alt="competences"></a>
                                         </div>
                                         <h5 class="text-dark b-0">COMPETENCES</h5><hr>
 
@@ -199,9 +196,7 @@
   <br>
 @endforeach
     <br>
-    <div class="user-img text-center">
-        <img src="{{asset("images/logo-rond.png")}}" alt="">
-    </div>
+
 <h5 class="text-dark mb-0" id="section_soft">SOFTSKILLS</h5><hr>
   <section class="portfolio-section section-gap-full" id="section-portfolio">
     <div class="container">
@@ -247,7 +242,7 @@
                 </div>
                      <div class="post-details">
                         <div class="user-img text-center">
-                         <img src="{{asset("images/logo-rond.png")}}" alt="">
+                            <img class="img-fluid m-2" src="{{asset('images/exper.png')}}" alt="experiences"></a>
                 </div>
                      <h5 class="text-dark mb-0">EXPERIENCES</h5><hr>
                          <blockquote class="blockquote ml-5">
@@ -324,7 +319,7 @@
                            </div>
                          <div class="post-details">
                             <div class="user-img text-center">
-                                <img src="{{asset("images/logo-rond.png")}}" alt="">
+                                <img class="img-fluid m-2" src="{{asset('images/classe.png')}}" alt="formations">
                                   </div>
                                     <br>
 
@@ -364,11 +359,14 @@
                            <div class="post-details">
                             <blockquote class="blockquote">
                                <div class="user-img text-center">
-                                 <img src="{{asset("images/logo-rond.png")}}" alt="">
+                                 <img class="img-fluid m-2" src="{{asset('images/loisirs.png')}}" alt="formations">
                             </div>
                                 <h5 class="text-dark mb-0">LOISIRS</h5><hr>
                                   <footer class="blockquote-footer">Centres d'interets</footer>
                               </blockquote>
+                              <p>
+                                <img src="https://img.icons8.com/ios-glyphs/30/000000/single-father.png"/>Famille
+                                </p>
                               <p>
                                 <img src="https://img.icons8.com/material-sharp/24/000000/code.png"/>&ensp;Langages de programmation
                                 </p>
@@ -379,15 +377,13 @@
                               <p>
                                 <img src="https://img.icons8.com/android/24/000000/running.png"/>&ensp;Course a pieds
                                 </p>
-                                <p>
-                                <img src="https://img.icons8.com/ios-glyphs/30/000000/single-father.png"/>&ensp;Famille
-                                </p>
+
                                 </div>
 
 
                       </div>
                       <div class="post-details text-center">
-                        <a href="{{asset('images/CV_Maurice_S.pdf')}}"download class="primary-btn"><i class="fa fa-download"></i>&ensp;CV</a>
+                        <a href="{{asset('images/CV_M_S.pdf')}}"download class="primary-btn"><i class="fa fa-download"></i>&ensp;CV</a>
                       </div>
                 </section>
 
